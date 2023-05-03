@@ -1,3 +1,4 @@
+
 body {
   margin: 0;
   padding: 0;
@@ -38,7 +39,31 @@ section {
 }
 
 #home {
-  background-image: url("images/landscape_bg.png");
+  background-image: url("images/home_landscape_bg.png");
+  background-size: cover;
+  background-position: center;
+  position: relative; /* Added position relative */
+}
+#about {
+  background-image: url("images/about_landscape_bg.png");
+  background-size: cover;
+  background-position: center;
+  position: relative; /* Added position relative */
+}
+#services {
+  background-image: url("images/services_landscape_bg.png");
+  background-size: cover;
+  background-position: center;
+  position: relative; /* Added position relative */
+}
+#portfolio {
+  background-image: url("images/portfolio_landscape_bg.png");
+  background-size: cover;
+  background-position: center;
+  position: relative; /* Added position relative */
+}
+#contact {
+  background-image: url("images/contact_landscape_bg.png");
   background-size: cover;
   background-position: center;
   position: relative; /* Added position relative */
