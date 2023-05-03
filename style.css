@@ -1,0 +1,274 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  position: sticky;
+  z-index: 1; 
+  top: 0;
+}
+
+header.animated{
+  display: flex; 
+  justify-content: center;
+}
+nav ul li a {
+  margin-right: 50px;
+}
+.logo img {
+  display: block;
+  margin: auto;
+}
+.logo {
+  position: fixed;
+  top: 10px;
+  left: 47%;
+  z-index: 2; 
+  border-radius: 50%; /* make the image a circle */
+  box-shadow: 0 0 8px 4px #aaaaaa; /* add a shadow to the image */
+  border: 4px solid #ffd700; /* set the border color to gold */
+}
+
+header nav {
+  display: flex;
+}
+
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+header nav ul li {
+  margin-right: 20px;
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+header nav ul li a:hover {
+  color: #ccc;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  main h2 {
+    margin-top: 0;
+  }
+  
+  section#about p {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+  
+  section#work ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  section#work li {
+    margin-bottom: 20px;
+  }
+  
+  section#work h3 {
+    margin: 0;
+    font-size: 22px;
+  }
+  
+  section#work p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  section#work a {
+    color: #333;
+    text-decoration: none;
+    border-bottom: 1px solid #333;
+  }
+  
+  section#work a:hover {
+    color: #000;
+    border-bottom: 1px solid #000;
+  }
+  
+  section#contact ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  section#contact li {
+    margin-bottom: 10px;
+  }
+  
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  footer p {
+    margin: 0;
+  }
+  
+  .animated {
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  
+  section#work a {
+    text-decoration: none;
+  }
+  section#work img {
+    max-width: 800px;
+  }
+
+  #popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 80%;
+    height: 80%;
+    overflow: auto;
+    background-color: #fff;
+    z-index: 1;
+  }
+  
+  #overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+  }
+  
+  #content {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  #content img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  #close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 18px;
+    background-color: transparent;
+    border: none;
+    color: #333;
+    cursor: pointer;
+  }
+
+  
+  /* modal styling */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 80%;
+    height: 80%;
+    overflow: auto;
+    background-color: #fff;
+    z-index: 1;
+  }
+  
+  .modal-image {
+    width: 100%;
+    height: auto;
+    max-height: 80%;
+  }
+  
+  .modal-button-container {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .modal-button {
+    font-size: 18px;
+    background-color: transparent;
+    border: none;
+    color: #333;
+    cursor: pointer;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 36px;
+    background-color: transparent;
+    border: none;
+    color: #333;
+    cursor: pointer;
+  }
+  
+  /* thumbnail styling */
+  #thumbnail-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .thumbnail {
+    width: 200px;
+    height: auto;
+    margin: 10px;
+    cursor: pointer;
+  }
+  
+  /* caption styling */
+  #caption {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    color: #333;
+    text-align: center;
+  }
+  
