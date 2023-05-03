@@ -1,4 +1,6 @@
-
+html {
+  scroll-behavior: smooth;
+}
 body {
   margin: 0;
   padding: 0;
@@ -42,8 +44,45 @@ section {
   background-image: url("images/home_landscape_bg.png");
   background-size: cover;
   background-position: center;
-  position: relative; /* Added position relative */
+  position: relative;
+  transition: background-position 0.3s ease-out;
 }
+
+#home:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: -1;
+}
+
+@media (min-width: 600px) {
+  #home {
+    background-attachment: fixed;
+  }
+}
+
+@media (min-width: 960px) {
+  #home {
+    background-position: 0px 0px;
+  }
+}
+
+@media (min-width: 1280px) {
+  #home {
+    background-position: 0px -100px;
+  }
+}
+
+@media (min-width: 1920px) {
+  #home {
+    background-position: 0px -200px;
+  }
+}
+
 #about {
   background-image: url("images/about_landscape_bg.png");
   background-size: cover;
