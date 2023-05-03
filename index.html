@@ -1,196 +1,102 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <meta charset="utf-8">
-  <title>My Portfolio</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
- 
-    <script src="https://use.fontawesome.com/1d8e4ff763.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/vuetify@1.x/dist/vuetify.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
 </head>
+
 <body>
-  <header class="animated" >
+  <div id="app">
+    <v-app>
+      <v-app-bar app class="sticky z-10">
+        <v-toolbar-items class="hidden-sm-and-down float-right">
+          <v-btn text href="#home">Home</v-btn>
+          <v-btn text href="#about">About</v-btn>
+          <v-btn text href="#services">Services</v-btn>
+          <v-btn text href="#portfolio">Portfolio</v-btn>
+          <v-btn text href="#contact">Contact</v-btn>
+        </v-toolbar-items>
+        <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
+        <v-toolbar-title>My Portfolio</v-toolbar-title>
+        <v-spacer></v-spacer>
+      </v-app-bar>
+      
+      <v-navigation-drawer app temporary>
+        <v-list>
+          <v-list-item v-for="(item, i) in menuItems" :key="i" :href="item.link">
+            <v-list-item-title>{{ item.title }}</v-list-item-title>
+          </v-list-item>
+        </v-list>
+      </v-navigation-drawer>
 
-    <nav>
-      <ul>
-        <li><a href="#about">About <i class="fa-regular fa-user"></i></a></li>
-        <li><a href="#work">Work</a></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-  <a href="index.html" class="logo"><img src="logo.png" height="100" width="100" alt=""></a>
-  <main class="animated">
-    <section id="about">
-      <h2 style="padding-top:5rem;">About Me</h2>
-      <p>I am an upcoming BSIT graduate in July 2023, I have a strong foundation in computer science and information technology. I am highly motivated to learn web development, and eager to apply my skills and knowledge to real-world projects. I am a hardworking and dedicated individual with a passion for technology, and committed to continuing my professional development in order to become an expert in my chosen field. With my determination and drive, I know that I am well-equipped to succeed in the dynamic and constantly evolving world of web development.</p>
+     
 
-    </section>
-    
-    <section id="work">
-        <h2 style="padding-top:5rem;">My Work</h2>
-        <ul>
-          <li>
-            <a href="Projects/payroll_system/work1.html">
-              <img src="Projects/payroll_system/home_page.png" alt="Sample work 1" title="Click to view more images">
-            </a>
-            <h3>CBOO Payroll System</h3>
-            <p>
-              Our capstone project was a payroll management system for a university's employee department. We aimed to improve efficiency and accuracy through features such as a client portal for viewing payroll and an admin portal for managing accounts and generating reports. This project was built using PHP as the backend language and MySQL as the database.
-            </p>
-        
-        
-        </li>
+      <v-main>
+        <v-container fluid>
+          <section id="home" class="relative z-0">
+            <v-row>
+              <v-col cols="12" class="text-center">
+                <div class="bg-img"></div>
+                <div class="home-content">
+                  <h1>Home Page</h1>
+                  <p>Welcome to my portfolio website!</p>
+                </div>
+              </v-col>
+            </v-row>
+          </section>
+
+          <section id="about">
+            <v-row>
+              <v-col cols="12">
+                <h1>About Page</h1>
+                <p>Learn more about me and my background.</p>
+              </v-col>
+            </v-row>
+          </section>
+
+          <section id="services">
+            <v-row>
+              <v-col cols="12">
+                <h1>Services Page</h1>
+                <p>Discover the services I offer.</p>
+              </v-col>
+            </v-row>
+          </section>
+
+          <section id="portfolio">
+            <v-row>
+              <v-col cols="12">
+                <h1>Portfolio Page</h1>
+                <p>Browse through some of my past work.</p>
+              </v-col>
+            </v-row>
+          </section>
+
+          <section id="contact">
+            <v-row>
+              <v-col cols="12">
+                <h1>Contact Page</h1>
+                <p>Get in touch with me to discuss your project.</p>
+              </v-col>
+            </v-row>
+          </section>
+        </v-container>
+      </v-main>
+
+      <v-footer app>
+        <span>&copy; {{ new Date().getFullYear() }} Christian Colewan</span>
+      </v-footer>
+    </v-app>
+  </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@1.x/dist/vuetify.js"></script>
 
 
-
-          <li>
-            <a href="Projects/Todo_list/todo_index.html">
-              <img src="Projects/Todo_list/todo.png" alt="Sample work 2">
-            </a>
-            <h3>To Do List</h3>
-            <p>A simple to-do list is a web-based application that allows users to create and manage a list of tasks. The application allows users to add new tasks, mark tasks as complete, and view a list of all their outstanding tasks. The application also includes a search feature that allows users to quickly find specific tasks.
-                <br>
-              The user interface is straightforward and easy to use, with a clean and modern design. The application is responsive, so it can be accessed from any device with an internet connection.
-              <br>
-              Overall, this simple to-do list project is a useful tool for individuals and teams looking to improve their productivity and stay organized. It is suitable for users of all skill levels and can be customized to meet the specific needs of different users and organizations.</p>
-          </li>
-
-          <li>
-            <a href="Projects/music_player/index.html">
-              <img src="images/music-player-img.png" alt="Sample work 3">
-            </a>
-            <h3>Music Player</h3>
-            <p>A simple and intuitive music player built with JavaScript, HTML, and CSS.</p>
-            <p>
-              Features:
-              <ul>
-                <li> Play and pause music tracks </li>
-                <li> Skip to the next or previous track</li>
-                <li>Display the current track and its duration</li>
-              </ul>
-              
-             
-             
-              
-            </p>
-          </li>
-          <li>
-            <a href="https://colewan-design.github.io/KelloWoodBuilders/">
-              <img src="images/kellywood-img.png" alt="Sample work 4">
-            </a>
-            <h3>Kelly Wood Builder Landing Page</h3>
-            <p>A sleek and professional landing page designed for Kellywood Builder Company.</p>
-            <p>
-              It was built using HTML, CSS, and JavaScript, and the design was based on a provided image.
-
-            </p>
-            <p>
-              The goal of the landing page is to provide potential customers with an overview of Kellywood Builder Company and its services, and to make it easy for them to get in touch with the company.
-            </p>
-          </li>
-
-          <li>
-            <a href="https://colewan-design.github.io/laptop-landing-page/">
-              <img src="images/laptop-landing-img.png" alt="Sample work 5">
-            </a>
-            <h3>Laptop Landing Page</h3>
-            <p>A responsive landing page for a laptop store that showcases the latest laptop models and their features.</p>
-            <p>
-              The landing page is built with HTML, CSS, and JavaScript, and it is fully responsive, meaning it looks great on all devices. The page was created as a practice project to demonstrate the ability to design and build a responsive website.
-
-            </p>
-            
-          </li>
-
-          <li>
-            <a href="Projects/fake-store/index.html">
-              <img src="images/fake-store-img.png" alt="Sample work 6">
-            </a>
-            <h3>Fake Store</h3>
-            <p>
-              "Fake Store" is a web page that displays a variety of products from a fake store API. The page includes the product name, price, and a description for each item. The page is built using HTML, CSS, and JavaScript, and it uses JavaScript to fetch data from the API and display it on the page. This project demonstrates the ability to use APIs and front-end web development technologies to create a functional and visually appealing web page.
-            </p>
-            
-          </li>
-          
-          <li>
-            <a href="Projects/movie/index.html">
-              <img src="images/movie-img.png" alt="Sample work 7">
-            </a>
-            <h3>Movie Search</h3>
-            <p>
-             This movie search website uses an API and JavaScript to allow users to search for movies and view details such as the title, poster, and release date.
-            </p>
-            
-          </li>
-        </ul>
-      </section>
-      <section class="contact-section" id="contact">
-        <h2>Contact</h2>
-        <div class="contact-info image-container">
-          <img src="images/profile.jpg" class="profile" alt="Profile picture">
-          <div>
-            <p>Christian Colewan</p>
-            <p>Email: cts.colewan@gmail.com</p>
-            <p>Phone: 09957139671</p>
-          </div>
-        </div>
-        
-      </section>
-  </main>
-  <footer>
-    <p>Copyright 2022 Christian Colewan</p>
-  </footer>
-
-  <style>
-    img.profile {
-  width: 100%; /* stretch the image to the width of the container */
-  height: auto; /* preserve the aspect ratio of the image */
-  object-fit: cover; /* crop the image to fill the container */
-}
-    .contact-info {
-      display: flex;
-      align-items: center;
-      margin-bottom: 20px;
-    }
-    .contact-info img {
-      width: 50px;
-      height: 50px;
-      margin-right: 20px;
-      border-radius: 50%;
-    }
-    .contact-form {
-      width: 70%;
-    }
-    .contact-form input[type="text"], .contact-form textarea {
-      width: 100%;
-      padding: 12px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      box-sizing: border-box;
-      margin-top: 6px;
-      margin-bottom: 16px;
-      resize: vertical;
-    }
-    .contact-form input[type="submit"] {
-      background-color: #4caf50;
-      color: white;
-      padding: 12px 20px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-    .contact-form input[type="submit"]:hover {
-      background-color: #45a049;
-    }
-  </style>
+    <script>
+        new Vue({ el: '#app' })
+    </script>
 </body>
-</html>
-
