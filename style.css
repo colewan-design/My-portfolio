@@ -267,6 +267,20 @@ section {
   border-radius: 5px;
   transition: background-color 0.3s ease-out;
 }
+#services a {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #fff;
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  transition: background-color 0.3s ease-out;
+}
+#services a:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
 
 #portfolio a:hover {
   background-color: rgba(255, 255, 255, 0.4);
