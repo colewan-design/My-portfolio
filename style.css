@@ -13,6 +13,7 @@ body {
 .v-btn{
   height: 3rem;
 }
+
 nav {
   position: fixed;
   top: 0;
@@ -180,11 +181,65 @@ section {
 }
 
 #about {
+  margin: -30px;
   background-image: url("images/about_landscape_bg.png");
   background-size: cover;
   background-position: center;
-  position: relative; /* Added position relative */
+  position: relative;
   transition: background-position 0.3s ease-out;
+}
+
+#about h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+#about h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+#about p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+#about img {
+  width: 300px;
+  height: 300px;
+}
+
+#about form {
+  margin-top: 30px;
+}
+
+#about label {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+#about input[type="text"],
+#about input[type="email"],
+#about textarea {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #fff;
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+#about input[type="text"]:focus,
+#about input[type="email"]:focus,
+#about textarea:focus {
+  outline: none;
+  border-bottom: 2px solid #fff;
+}
+
+#about button[type="submit"] {
+  background-color: #fff;
+  color: #3498db;
+  font-size: 18px;
 }
 #services {
   background-image: url("images/services_landscape_bg.png");
@@ -208,14 +263,6 @@ section {
   transition: background-position 0.3s ease-out;
 }
 
-.bg-img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
-}
 
 .home-content {
   z-index: 1;
@@ -298,3 +345,42 @@ section p {
 .night p {
   color: #B0C4DE; /* light steel blue */
 }
+.fa-github, .fa-linkedin, .fa-facebook, .fa-youtube{
+  font-size: 48px;
+  color: white;
+  display: inline-block; 
+  }
+
+  .fa-instagram {
+    font-size: 48px;
+    color: #fff; /* Instagram's brand color */
+    mask-image: linear-gradient(to bottom right, transparent 50%, white 50%);
+    transition: mask-position 0.3s ease-in-out;
+  }
+  
+.fa-github:hover{
+  color: black !important;
+  border-radius: 50%; /* Add this line to make the background color circular */
+  transition: background-color 0.3s ease-in-out; /* Add this line for a smooth color transition */
+}
+.fa-linkedin:hover{
+  color: rgb(0, 119, 181) !important;
+  border-radius: 50%; /* Add this line to make the background color circular */
+  transition: background-color 0.3s ease-in-out; /* Add this line for a smooth color transition */
+}
+.fa-facebook:hover{
+  color: rgb(66, 103, 178) !important;
+  border-radius: 50%; /* Add this line to make the background color circular */
+  transition: background-color 0.3s ease-in-out; /* Add this line for a smooth color transition */
+}
+.fa-youtube:hover{
+  color: rgb(255, 0, 0) !important;
+  border-radius: 50%; /* Add this line to make the background color circular */
+  transition: background-color 0.3s ease-in-out; /* Add this line for a smooth color transition */
+}
+.fa-instagram:hover {
+  color: #C13584; /* Instagram's brand color */
+}
+
+
+
