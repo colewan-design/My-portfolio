@@ -11,34 +11,33 @@
 <body>
   <div id="app">
     <v-app>
-      <v-app-bar class="sticky z-10">
-        <v-toolbar-items class="hidden-sm-and-down float-right">
-          <v-btn text href="#home">Home</v-btn>
-          <v-btn text href="#about">About</v-btn>
-          <v-btn text href="#services">Services</v-btn>
-          <v-btn text href="#portfolio">Portfolio</v-btn>
-          <v-btn text href="#contact">Contact</v-btn>
-        </v-toolbar-items>
-        <v-toolbar-title>My Portfolio</v-toolbar-title>
-        <v-spacer></v-spacer>
-      </v-app-bar>
-
       <v-main>
         <v-container fluid full-width class="px-0">
-
-          <section id="home" class="relative z-0">
+          <div class="sticky z-10 navbar">
+            <v-toolbar-items class="hidden-sm-and-down float-right v-btn">
+              <v-btn text href="#home">Home</v-btn>
+              <v-btn text href="#about">About</v-btn>
+              <v-btn text href="#services">Services</v-btn>
+              <v-btn text href="#portfolio">Portfolio</v-btn>
+              <v-btn text href="#contact">Contact</v-btn>
+            </v-toolbar-items>
+            <h1 href="#home" class="CC"> CC </h1>
+            <v-spacer></v-spacer>
+          </div>
+        
+          <section id="home" class="relative z-0 dawn">
             <v-row>
               <v-col cols="12" class="text-center">
                 <div class="bg-img"></div>
                 <div class="home-content">
-                  <h1>Home Page</h1>
+                  <h1>My Name is Christian</h1>
                   <p>Welcome to my portfolio website!</p>
                 </div>
               </v-col>
             </v-row>
           </section>
-
-          <section id="about">
+        
+          <section id="about" class="morning">
             <v-row>
               <v-col cols="12">
                 <h1>About Page</h1>
@@ -46,8 +45,8 @@
               </v-col>
             </v-row>
           </section>
-
-          <section id="services">
+        
+          <section id="services" class="afternoon">
             <v-row>
               <v-col cols="12">
                 <h1>Services Page</h1>
@@ -55,8 +54,8 @@
               </v-col>
             </v-row>
           </section>
-
-          <section id="portfolio">
+        
+          <section id="portfolio" class="evening">
             <v-row>
               <v-col cols="12">
                 <h1>Portfolio Page</h1>
@@ -65,7 +64,7 @@
             </v-row>
           </section>
 
-          <section id="contact">
+          <section id="contact" class="night">
             <v-row>
               <v-col cols="12">
                 <h1>Contact Page</h1>

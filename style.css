@@ -6,7 +6,13 @@ body {
   padding: 0;
   font-family: 'Roboto', sans-serif; /* Updated font-family to use Roboto */
 }
-
+.CC{
+  color: #f5f5f5;
+  padding: 1rem;
+}
+.v-btn{
+  height: 3rem;
+}
 nav {
   position: fixed;
   top: 0;
@@ -41,6 +47,7 @@ section {
 }
 
 #home {
+  margin: -30px;
   background-image: url("images/home_landscape_bg.png");
   background-size: cover;
   background-position: center;
@@ -58,9 +65,62 @@ section {
   background: rgba(0,0,0,0.4);
   z-index: -1;
 }
+#about:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: -1;
+}
+#services:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: -1;
+}
+#portfolio:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: -1;
+}
+#contact:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: -1;
+}
 
 @media (min-width: 600px) {
   #home {
+    background-attachment: fixed;
+  }
+
+  #services {
+    background-attachment: fixed;
+  }
+  #about {
+    background-attachment: fixed;
+  }
+  #portfolio {
+    background-attachment: fixed;
+  }
+  #contact {
     background-attachment: fixed;
   }
 }
@@ -69,16 +129,52 @@ section {
   #home {
     background-position: 0px 0px;
   }
+  #services {
+    background-position: 0px 0px;
+  }
+  #about {
+    background-position: 0px 0px;
+  }
+  #portfolio {
+    background-position: 0px 0px;
+  }
+  #contact {
+    background-position: 0px 0px;
+  }
 }
 
 @media (min-width: 1280px) {
   #home {
     background-position: 0px -100px;
   }
+  #services {
+    background-position: 0px -100px;
+  }
+  #about {
+    background-position: 0px -100px;
+  }
+  #portfolio {
+    background-position: 0px -100px;
+  }
+  #contact {
+    background-position: 0px -100px;
+  }
 }
 
 @media (min-width: 1920px) {
   #home {
+    background-position: 0px -200px;
+  }
+  #services {
+    background-position: 0px -200px;
+  }
+  #about {
+    background-position: 0px -200px;
+  }
+  #portfolio {
+    background-position: 0px -200px;
+  }
+  #contact {
     background-position: 0px -200px;
   }
 }
@@ -88,24 +184,28 @@ section {
   background-size: cover;
   background-position: center;
   position: relative; /* Added position relative */
+  transition: background-position 0.3s ease-out;
 }
 #services {
   background-image: url("images/services_landscape_bg.png");
   background-size: cover;
   background-position: center;
   position: relative; /* Added position relative */
+  transition: background-position 0.3s ease-out;
 }
 #portfolio {
   background-image: url("images/portfolio_landscape_bg.png");
   background-size: cover;
   background-position: center;
   position: relative; /* Added position relative */
+  transition: background-position 0.3s ease-out;
 }
 #contact {
   background-image: url("images/contact_landscape_bg.png");
   background-size: cover;
   background-position: center;
   position: relative; /* Added position relative */
+  transition: background-position 0.3s ease-out;
 }
 
 .bg-img {
@@ -159,7 +259,42 @@ section p {
   position: fixed;
   top: 0;
   width: 100%;
+  background-color: transparent;
 }
 .z-10 {
   z-index: 10;
+}
+.navbar {
+  background-color: rgba(255, 255, 255, 0.1);
+  align-items: center;
+}
+
+.navbar.transparent {
+  background-color: transparent;
+}
+
+
+.dawn h1,
+.dawn p {
+  color: #F0E68C; /* light yellow */
+}
+
+.morning h1,
+.morning p {
+  color: #FFA07A; /* light salmon */
+}
+
+.afternoon h1,
+.afternoon p {
+  color: #FFD700; /* gold */
+}
+
+.evening h1,
+.evening p {
+  color: #87CEFA; /* light sky blue */
+}
+
+.night h1,
+.night p {
+  color: #B0C4DE; /* light steel blue */
 }
