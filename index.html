@@ -4,6 +4,7 @@
 <head>
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/vuetify@1.x/dist/vuetify.min.css" rel="stylesheet">
+  <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
 </head>
@@ -11,61 +12,75 @@
 <body>
   <div id="app">
     <v-app>
-      <v-app-bar class="sticky z-10">
-        <v-toolbar-items class="hidden-sm-and-down float-right">
-          <v-btn text href="#home">Home</v-btn>
-          <v-btn text href="#about">About</v-btn>
-          <v-btn text href="#services">Services</v-btn>
-          <v-btn text href="#portfolio">Portfolio</v-btn>
-          <v-btn text href="#contact">Contact</v-btn>
-        </v-toolbar-items>
-        <v-toolbar-title></v-toolbar-title>
-        <v-spacer></v-spacer>
-      </v-app-bar>
-
       <v-main>
         <v-container fluid full-width class="px-0">
-
-          <section id="home" class="relative z-0">
+          <div class="sticky z-10 navbar">
+            <v-toolbar-items class="hidden-sm-and-down float-right v-btn">
+              <v-btn text href="#home">Home</v-btn>
+              <v-btn text href="#about">About</v-btn>
+              <v-btn text href="#services">Services</v-btn>
+              <v-btn text href="#portfolio">Portfolio</v-btn>
+              <v-btn text href="#contact">Contact</v-btn>
+            </v-toolbar-items>
+            <h1 href="#home" class="CC"> CC </h1>
+            <v-spacer></v-spacer>
+          </div>
+        
+          <section id="home" class="relative z-0 dawn">
             <v-row>
               <v-col cols="12" class="text-center">
-                <div class="bg-img"></div>
                 <div class="home-content">
-                  <h1>Home Page</h1>
+                  <h1>Hi, my name is Christian Colewan</h1>
                   <p>Welcome to my portfolio website!</p>
+                  <div class="social-icons">
+                    <a href="https://github.com/colewan-design" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/christian-colewan-a936b713a/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.facebook.com/montblanc321" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.youtube.com/channel/UCjoB8Uuu4symlj4nIgcrS7g" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/teekunana/" target="_blank"><i class="fab fa-instagram"></i></a>
+                  </div>
                 </div>
               </v-col>
             </v-row>
           </section>
-
+          
+        
           <section id="about">
-            <v-row>
-              <v-col cols="12">
-                <h1>About Page</h1>
-                <p>Learn more about me and my background.</p>
-              </v-col>
-            </v-row>
+            <div class="container">
+              <div class="row">
+                <div class="col-md-6">
+                  <h2>About Me</h2>
+                  <p class="lead">Hi there! I'm Christian, a web developer based in Baguio.</p>
+                  <p>I have always been passionate about solving problems. My journey in this field started when a friend told me how we can create text commands and be able to display it in the screen. Since then, I have been honing my skills and gaining experience in different programming languages to create web pages.</p>
+                  <p>I am a motivated, focused, and patient individual who loves taking on new challenges and delivering exceptional results.</p>
+                  <p>In my free time, I enjoy touring around the city using my bike. I believe that success seems to be connected to action. Successful people keep moving. They make mistakes but they don't quit.</p>
+                </div>
+                
+              </div>
+            </div>
           </section>
-
-          <section id="services">
+          
+        
+          <section id="services" class="afternoon">
             <v-row>
               <v-col cols="12">
                 <h1>Services Page</h1>
-                <p>Discover the services I offer.</p>
+                
+                <a href="services/index.html">Discover the services I offer.</a>
               </v-col>
             </v-row>
           </section>
-
-          <section id="portfolio">
+        
+          <section id="portfolio" class="evening">
             <v-row>
               <v-col cols="12">
-                <h1>Portfolio Page</h1>
-                <p>Browse through some of my past work.</p>
+                <h1>Portfolio</h1>
+                <a href="work/index.html">See my previous work.</a>
               </v-col>
             </v-row>
           </section>
 
-          <section id="contact">
+          <section id="contact" class="night">
             <v-row>
               <v-col cols="12">
                 <h1>Contact Page</h1>

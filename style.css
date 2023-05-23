@@ -6,6 +6,13 @@ body {
   padding: 0;
   font-family: 'Roboto', sans-serif; /* Updated font-family to use Roboto */
 }
+.CC{
+  color: #f5f5f5;
+  padding: 1rem;
+}
+.v-btn{
+  height: 3rem;
+}
 
 nav {
   position: fixed;
@@ -41,7 +48,8 @@ section {
 }
 
 #home {
-
+  margin: -30px;
+  background-image: url("images/home_landscape_bg.png");
   background-size: cover;
   background-position: center;
   position: relative;
@@ -57,9 +65,102 @@ section {
   bottom: 0;
   z-index: -1;
 }
+#about:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: -1;
+}
+#services:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: -1;
+}
+#portfolio:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: -1;
+}
+#contact:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: -1;
+}
+#about:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: -1;
+}
+#services:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: -1;
+}
+#portfolio:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: -1;
+}
+#contact:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: -1;
+}
 
 @media (min-width: 600px) {
   #home {
+    background-attachment: fixed;
+  }
+
+  #services {
+    background-attachment: fixed;
+  }
+  #about {
+    background-attachment: fixed;
+  }
+  #portfolio {
+    background-attachment: fixed;
+  }
+  #contact {
     background-attachment: fixed;
   }
 }
@@ -68,10 +169,34 @@ section {
   #home {
     background-position: 0px 0px;
   }
+  #services {
+    background-position: 0px 0px;
+  }
+  #about {
+    background-position: 0px 0px;
+  }
+  #portfolio {
+    background-position: 0px 0px;
+  }
+  #contact {
+    background-position: 0px 0px;
+  }
 }
 
 @media (min-width: 1280px) {
   #home {
+    background-position: 0px -100px;
+  }
+  #services {
+    background-position: 0px -100px;
+  }
+  #about {
+    background-position: 0px -100px;
+  }
+  #portfolio {
+    background-position: 0px -100px;
+  }
+  #contact {
     background-position: 0px -100px;
   }
 }
@@ -80,32 +205,134 @@ section {
   #home {
     background-position: 0px -200px;
   }
+  #services {
+    background-position: 0px -200px;
+  }
+  #about {
+    background-position: 0px -200px;
+  }
+  #portfolio {
+    background-position: 0px -200px;
+  }
+  #contact {
+    background-position: 0px -200px;
+  }
 }
 
 #about {
-
+  margin: -30px;
+  background-image: url("images/about_landscape_bg.png");
   background-size: cover;
   background-position: center;
-  position: relative; /* Added position relative */
+  position: relative;
+  transition: background-position 0.3s ease-out;
+}
+
+#about h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+#about h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+#about p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+#about img {
+  width: 300px;
+  height: 300px;
+}
+
+#about form {
+  margin-top: 30px;
+}
+
+#about label {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+#about input[type="text"],
+#about input[type="email"],
+#about textarea {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #fff;
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+#about input[type="text"]:focus,
+#about input[type="email"]:focus,
+#about textarea:focus {
+  outline: none;
+  border-bottom: 2px solid #fff;
+}
+
+#about button[type="submit"] {
+  background-color: #fff;
+  color: #3498db;
+  font-size: 18px;
 }
 #services {
 
   background-size: cover;
   background-position: center;
   position: relative; /* Added position relative */
+  transition: background-position 0.3s ease-out;
 }
 #portfolio {
 
   background-size: cover;
   background-position: center;
   position: relative; /* Added position relative */
+  transition: background-position 0.3s ease-out;
+  
 }
+#portfolio a {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #fff;
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  transition: background-color 0.3s ease-out;
+}
+#services a {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #fff;
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  transition: background-color 0.3s ease-out;
+}
+#services a:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+#portfolio a:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
 #contact {
 
   background-size: cover;
   background-position: center;
   position: relative; /* Added position relative */
+  transition: background-position 0.3s ease-out;
 }
+
 
 .home-content {
   z-index: 1;
@@ -149,7 +376,81 @@ section p {
   position: fixed;
   top: 0;
   width: 100%;
+  background-color: transparent;
 }
 .z-10 {
   z-index: 10;
 }
+.navbar {
+  background-color: rgba(255, 255, 255, 0.1);
+  align-items: center;
+}
+
+.navbar.transparent {
+  background-color: transparent;
+}
+
+
+.dawn h1,
+.dawn p {
+  color: #F0E68C; /* light yellow */
+}
+
+.morning h1,
+.morning p {
+  color: #FFA07A; /* light salmon */
+}
+
+.afternoon h1,
+.afternoon p {
+  color: #FFD700; /* gold */
+}
+
+.evening h1,
+.evening p {
+  color: #87CEFA; /* light sky blue */
+}
+
+.night h1,
+.night p {
+  color: #B0C4DE; /* light steel blue */
+}
+.fa-github, .fa-linkedin, .fa-facebook, .fa-youtube{
+  font-size: 48px;
+  color: white;
+  display: inline-block; 
+  }
+
+  .fa-instagram {
+    font-size: 48px;
+    color: #fff; /* Instagram's brand color */
+    mask-image: linear-gradient(to bottom right, transparent 50%, white 50%);
+    transition: mask-position 0.3s ease-in-out;
+  }
+  
+.fa-github:hover{
+  color: black !important;
+  border-radius: 50%; /* Add this line to make the background color circular */
+  transition: background-color 0.3s ease-in-out; /* Add this line for a smooth color transition */
+}
+.fa-linkedin:hover{
+  color: rgb(0, 119, 181) !important;
+  border-radius: 50%; /* Add this line to make the background color circular */
+  transition: background-color 0.3s ease-in-out; /* Add this line for a smooth color transition */
+}
+.fa-facebook:hover{
+  color: rgb(66, 103, 178) !important;
+  border-radius: 50%; /* Add this line to make the background color circular */
+  transition: background-color 0.3s ease-in-out; /* Add this line for a smooth color transition */
+}
+.fa-youtube:hover{
+  color: rgb(255, 0, 0) !important;
+  border-radius: 50%; /* Add this line to make the background color circular */
+  transition: background-color 0.3s ease-in-out; /* Add this line for a smooth color transition */
+}
+.fa-instagram:hover {
+  color: #C13584; /* Instagram's brand color */
+}
+
+
+
