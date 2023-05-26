@@ -1,3 +1,19 @@
+/*animation */
+@keyframes wave-animation {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(-30deg); }
+  50% { transform: rotate(0deg); }
+  75% { transform: rotate(30deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.hand-wave {
+  display: inline-block;
+  animation-name: wave-animation;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -43,10 +59,6 @@ nav a {
   height: 30px; /* Adjust the height as per your requirements */
 }
 
-#home {
-  height: 600px; /* Adjust the height as per your requirements */
-}
-
 .social-icons {
   position: absolute;
   bottom: 0;
@@ -56,14 +68,21 @@ nav a {
 }
 
 .social-icons a{
- padding: .25rem;
+ padding-left: .25rem;
 }
 /* about section */
 .dark-theme-section {
   background-color: #37474f;
   color: #ffffff;
   padding: 20px;
-  margin-bottom: 20px;
+
+}
+.text-design{
+  font-size: 25px;
+}
+ul {
+  list-style: none;
+  padding: 0;
 }
 
 .dark-theme-section h2 {
@@ -85,17 +104,16 @@ section {
 }
 
 #home {
-  margin: -30px;
+  height: 600px;
+  margin-top: -30px;
   position: relative;
   transition: background-position 0.3s ease-out;
 }
 
 
 #about {
-  margin: -30px;
   position: relative;
-  padding-top: 5rem;
-  transition: background-position 0.3s ease-out;
+  height: 1080px;
 }
 
 #about h2 {
@@ -112,92 +130,91 @@ section {
   font-size: 18px;
   line-height: 1.5;
 }
-
-
-#about form {
-  margin-top: 30px;
-}
-
-#about label {
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-
-#about input[type="text"],
-#about input[type="email"],
-#about textarea {
-  background: transparent;
-  border: none;
-  border-bottom: 2px solid #fff;
-  color: #fff;
-  font-size: 18px;
-  margin-bottom: 20px;
-}
-
-#about input[type="text"]:focus,
-#about input[type="email"]:focus,
-#about textarea:focus {
-  outline: none;
-  border-bottom: 2px solid #fff;
-}
-
-#about button[type="submit"] {
-  background-color: #fff;
-  color: #3498db;
-  font-size: 18px;
-}
 .set-width{
   width: 20px;
   padding: 50px;
 }
-#services {
 
-  background-size: cover;
-  background-position: center;
-  position: relative; /* Added position relative */
-  transition: background-position 0.3s ease-out;
-}
 #portfolio {
-  position: relative; /* Added position relative */
-  transition: background-position 0.3s ease-out;
-  
-}
-#portfolio a {
-  display: inline-block;
-  padding: 10px 20px;
-  font-size: 1.2rem;
-  font-weight: 500;
-  color: #fff;
-  text-decoration: none;
-  background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 5px;
-  transition: background-color 0.3s ease-out;
-}
-#services a {
-  display: inline-block;
-  padding: 10px 20px;
-  font-size: 1.2rem;
-  font-weight: 500;
-  color: #fff;
-  text-decoration: none;
-  background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 5px;
-  transition: background-color 0.3s ease-out;
-}
-#services a:hover {
-  background-color: rgba(255, 255, 255, 0.4);
+height: 1080px;
+position: relative; /* Added position relative */
 }
 
-#portfolio a:hover {
-  background-color: rgba(255, 255, 255, 0.4);
-}
 
 #contact {
-
   background-size: cover;
   background-position: center;
   position: relative; /* Added position relative */
-  transition: background-position 0.3s ease-out;
+}
+.text-align-center{
+  text-align: center;
+}
+.project-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.project-item {
+  margin-left: 20px;
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s;
+}
+
+.project-item:hover {
+  transform: scale(1.05);
+}
+
+.project-item img {
+  width: 100%;
+  max-width: 300px;
+  border: 2px solid #000;
+  border-radius: 5px;
+}
+
+.project-info {
+  margin-top: 10px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.project-item:hover .project-info {
+  opacity: 1;
+}
+
+.repo-link {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+}
+
+.repo-link:hover {
+  background-color: #333;
+}
+.skillset{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.box {
+  width: 150px;
+  height: 100px;
+  background-color: #2e2b2b;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
 }
 
 
@@ -216,9 +233,11 @@ section h1 {
 }
 section p {
   font-size: 24px;
-  text-align: center;
+  text-align: left;
 }
-
+.align-right{
+  text-align: left;
+}
 /* Added some styles for the Vuetify components */
 .v-navigation-drawer__content {
   background-color: #f5f5f5;
@@ -237,6 +256,7 @@ section p {
   background-color: #f5f5f5;
   padding: 10px;
 }
+
 .about-float-left{
   flex: 30%;
 }

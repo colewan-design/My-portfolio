@@ -8,7 +8,18 @@
  
   <link href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Include the library. -->
+<script
+src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js">
+</script>
 
+<!-- Optionally, include the theme (if you don't want to struggle to write the CSS) -->
+<link
+rel="stylesheet"
+href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css"
+/>
+  </script>
 
   <style>
     /* typing animation */
@@ -40,9 +51,9 @@
             <v-toolbar-items class="hidden-sm-and-down float-right v-btn">
               <v-btn text href="#home">Home</v-btn>
               <v-btn text href="#about">About</v-btn>
-              <v-btn text href="#services">Services</v-btn>
-              <v-btn text href="#portfolio">Portfolio</v-btn>
-              <v-btn text href="#contact">Contact</v-btn>
+              <v-btn text href="#portfolio">Projects</v-btn>
+              <v-btn text href="assets/resume.pdf" target="_blank" download>Resume</v-btn>
+
             </v-toolbar-items>
             <h1 href="#home" class="CC"> CC </h1>
             <v-spacer></v-spacer>
@@ -50,9 +61,12 @@
 
           <section id="home" class="relative dark-theme-section">
             <v-row>
-              <v-col cols="12" class="text-center">
+              <v-col cols="12">
                 <div class="home-content">
-                  <h1>Hi, my name is Christian Colewan</h1>
+                  <h2 class="align-right">
+                    Hi there! <span class="hand-wave">👋🏻</span>
+                  </h2>                  
+                  <h1>My name is Christian Colewan</h1>
                   <div id="text-container" class="typing-animation"></div>
                 </div>
               </v-col>
@@ -69,63 +83,136 @@
 
 
           <section id="about" class="dark-theme-section">
-            <h2 class="text-white center">About Me</h2>
+            <h2 class="text-white center">My Story</h2>
             <v-container>
               
               <div class="flex-container">
                 
                 <div class="about-float-left">
-                  <img src="logo.png" alt="Profile Image" height="200px">
+                  <img src="images/me.jpg" alt="Profile Image" height="200px">
                 </div>
                 <div class="about-float-right">
                   
-                  <p class="lead text-white">Hi there! I'm Christian, a web developer based in Baguio.</p>
-                 I have always been passionate about solving problems. My journey in this field started when a friend told me how we can create text commands and be able to display it on the screen. Since then, I have been honing my skills and gaining experience in different programming languages to create web pages.
+                  <p class="lead text-white" style="font-size: 18px;">
+                 Hi everyone, I am <span class="text-design">Christian</span>, from <span class="text-design">Baguio, Philippines</span>.
                  I am a motivated, focused, and patient individual who loves taking on new challenges and delivering exceptional results.
-                  In my free time, I enjoy touring around the city using my bike. I believe that success seems to be connected to action. Successful people keep moving. They make mistakes, but they don't quit.</p>
-                </div>
+                  </p>
+                  <div>
+                    <p>
+                      Apart from coding, here are some other activities that I love to do!
+                   </p>
+                   <ul>
+                    <li><i class="fas fa-bicycle"></i> Bike Touring</li>
+                    <li><i class="fas fa-film"></i> Watching Movies</li>
+                    <li><i class="fas fa-gamepad"></i> Online Games</li>
+                  </ul>
+                  </div>
+                  
+                  <h3 class="skillset text-white center">Professional Skillset</h3>
+  
+                  <div class="skillset">
+                    <div class="box">php</div>
+                    <div class="box">laravel</div>
+                    <div class="box">vue</div>
+                    <div class="box">mysql</div>
+                    <div class="box">html</div>
+                    <div class="box">css</div>
+                    <div class="box">pgsql</div>
+                    <div class="box">git</div>
+                  </div>
+                  
+                  </div>
+                 
+                  
               </div>
+              <div>
+                <!-- Prepare a container for your calendar. -->
+                <h3 class="skillset text-white center">Days | Code</h3>
+               <div class="calendar">
+                 <!-- Loading stuff -->
+                 Loading the data just for you.
+               </div>
+               </div>
             </v-container>
           </section>
           
           
-          
-          
-          
-
-
-          <section id="services" class="dark-theme-section">
-            <v-container>
-              <v-row>
-                <v-col cols="12" md="6">
-                  <h1>Services Page</h1>
-                  <a href="services/index.html">Discover the services I offer.</a>
-                </v-col>
-              </v-row>
-            </v-container>
-          </section>
-
-          <section id="portfolio" class="dark-theme-section">
+          <section id="portfolio" class="dark-theme-section text-align-center">
             <v-container>
               <v-row>
                 <v-col cols="12">
-                  <h1>Portfolio</h1>
-                  <a href="work/index.html">See my previous work.</a>
+                  <h1 class="text-white">Projects</h1>
                 </v-col>
               </v-row>
-            </v-container>
-          </section>
-
-          <section id="contact" class="dark-theme-section">
-            <v-container>
+              <v-row class="project-gallery">
+                <v-col cols="4">
+                  <div class="project-item">
+                    <img src="images/project1.png" alt="Project 1">
+                    <div class="project-info">
+                      <h3>KellyWood Builders Landing Page</h3>
+                      <a href="https://github.com/colewan-design/KelloWoodBuilders" target="_blank" class="repo-link">GitHub Repo</a>
+                    </div>
+                  </div>
+                </v-col>
+                <v-col cols="4">
+                  <div class="project-item">
+                    <img src="images/project2.png" alt="Project 2">
+                    <div class="project-info">
+                      <h3>Laptop Landing Page</h3>
+                      <a href="https://github.com/username/repo2" target="_blank" class="repo-link">GitHub Repo</a>
+                    </div>
+                  </div>
+                </v-col>
+                <v-col cols="4">
+                  <div class="project-item">
+                    <img src="images/project3.png" alt="Project 3">
+                    <div class="project-info">
+                      <h3>Music Player</h3>
+                     
+                      <a href="https://github.com/username/repo3" target="_blank" class="repo-link">GitHub Repo</a>
+                    </div>
+                  </div>
+                </v-col>
+              </v-row>
+              <!--new row-->
+              <v-row class="project-gallery">
+                <v-col cols="4">
+                  <div class="project-item">
+                    <img src="images/project4.png" alt="Project 4">
+                    <div class="project-info">
+                      <h3>Movie Site | IMDB API</h3>
+                    
+                      <a href="https://github.com/username/repo4" target="_blank" class="repo-link">GitHub Repo</a>
+                    </div>
+                  </div>
+                </v-col>
+                <v-col cols="4">
+                  <div class="project-item">
+                    <img src="images/project5.png" alt="Project 5">
+                    <div class="project-info">
+                      <h3>Fake Store | FAKE STORE API</h3>
+                     
+                      <a href="https://github.com/username/repo5" target="_blank" class="repo-link">GitHub Repo</a>
+                    </div>
+                  </div>
+                </v-col>
+                <v-col cols="4">
+                  <div class="project-item">
+                    <img src="images/project6.png" alt="Project 5">
+                    <div class="project-info">
+                      <h3>CBOO Payroll System</h3>
+                     
+                      <a href="https://github.com/username/repo5" target="_blank" class="repo-link">GitHub Repo</a>
+                    </div>
+                  </div>
+                </v-col>
+              </v-row>
               <v-row>
-                <v-col cols="12">
-                  <h1>Contact Page</h1>
-                  <p>Get in touch with me to discuss your project.</p>
-                </v-col>
+                <div class="contribution-grid" id="contribution-grid"></div>
               </v-row>
             </v-container>
           </section>
+        
         </v-container>
       </v-main>
 
@@ -187,7 +274,19 @@
     typeText(); // Start the animation
 
   </script>
+<script>
+  GitHubCalendar(".calendar", "colewan-design");
 
+  // or enable responsive functionality:
+  GitHubCalendar(".calendar", "colewan-design", { responsive: true });
+
+  // Use a proxy
+  GitHubCalendar(".calendar", "colewan-design", {
+     proxy (username) {
+       return fetch(`https://your-proxy.com/github?user=${username}`)
+     }
+  }).then(r => r.text())
+</script>
   <script>
     new Vue({ el: '#app' })
   </script>
