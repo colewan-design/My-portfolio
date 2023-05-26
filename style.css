@@ -39,6 +39,43 @@ nav a {
   font-size: 18px;
 }
 
+#text-container {
+  height: 30px; /* Adjust the height as per your requirements */
+}
+
+#home {
+  height: 600px; /* Adjust the height as per your requirements */
+}
+
+.social-icons {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 40px; /* Adjust the margin as per your requirements */
+}
+
+.social-icons a{
+ padding: .25rem;
+}
+/* about section */
+.dark-theme-section {
+  background-color: #37474f;
+  color: #ffffff;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.dark-theme-section h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.dark-theme-section p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
 section {
   height: 100vh;
   display: flex;
@@ -49,182 +86,15 @@ section {
 
 #home {
   margin: -30px;
-  background-image: url("images/home_landscape_bg.png");
-  background-size: cover;
-  background-position: center;
   position: relative;
   transition: background-position 0.3s ease-out;
 }
 
-#home:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
-}
-#about:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0,0,0,0.4);
-  z-index: -1;
-}
-#services:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0,0,0,0.4);
-  z-index: -1;
-}
-#portfolio:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0,0,0,0.4);
-  z-index: -1;
-}
-#contact:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0,0,0,0.4);
-  z-index: -1;
-}
-#about:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0,0,0,0.4);
-  z-index: -1;
-}
-#services:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0,0,0,0.4);
-  z-index: -1;
-}
-#portfolio:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0,0,0,0.4);
-  z-index: -1;
-}
-#contact:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0,0,0,0.4);
-  z-index: -1;
-}
-
-@media (min-width: 600px) {
-  #home {
-    background-attachment: fixed;
-  }
-
-  #services {
-    background-attachment: fixed;
-  }
-  #about {
-    background-attachment: fixed;
-  }
-  #portfolio {
-    background-attachment: fixed;
-  }
-  #contact {
-    background-attachment: fixed;
-  }
-}
-
-@media (min-width: 960px) {
-  #home {
-    background-position: 0px 0px;
-  }
-  #services {
-    background-position: 0px 0px;
-  }
-  #about {
-    background-position: 0px 0px;
-  }
-  #portfolio {
-    background-position: 0px 0px;
-  }
-  #contact {
-    background-position: 0px 0px;
-  }
-}
-
-@media (min-width: 1280px) {
-  #home {
-    background-position: 0px -100px;
-  }
-  #services {
-    background-position: 0px -100px;
-  }
-  #about {
-    background-position: 0px -100px;
-  }
-  #portfolio {
-    background-position: 0px -100px;
-  }
-  #contact {
-    background-position: 0px -100px;
-  }
-}
-
-@media (min-width: 1920px) {
-  #home {
-    background-position: 0px -200px;
-  }
-  #services {
-    background-position: 0px -200px;
-  }
-  #about {
-    background-position: 0px -200px;
-  }
-  #portfolio {
-    background-position: 0px -200px;
-  }
-  #contact {
-    background-position: 0px -200px;
-  }
-}
 
 #about {
   margin: -30px;
-  background-image: url("images/about_landscape_bg.png");
-  background-size: cover;
-  background-position: center;
   position: relative;
+  padding-top: 5rem;
   transition: background-position 0.3s ease-out;
 }
 
@@ -243,10 +113,6 @@ section {
   line-height: 1.5;
 }
 
-#about img {
-  width: 300px;
-  height: 300px;
-}
 
 #about form {
   margin-top: 30px;
@@ -280,6 +146,10 @@ section {
   color: #3498db;
   font-size: 18px;
 }
+.set-width{
+  width: 20px;
+  padding: 50px;
+}
 #services {
 
   background-size: cover;
@@ -288,9 +158,6 @@ section {
   transition: background-position 0.3s ease-out;
 }
 #portfolio {
-
-  background-size: cover;
-  background-position: center;
   position: relative; /* Added position relative */
   transition: background-position 0.3s ease-out;
   
@@ -344,7 +211,9 @@ section h1 {
   font-size: 48px;
   margin-bottom: 20px;
 }
-
+.center{
+  align-items: center;
+}
 section p {
   font-size: 24px;
   text-align: center;
@@ -368,10 +237,35 @@ section p {
   background-color: #f5f5f5;
   padding: 10px;
 }
+.about-float-left{
+  flex: 30%;
+}
+.about-float-right{
+  flex: 70%;
+}
 .float-right {
   float: right;
   margin-right: 20px;
 }
+.float-left {
+  float: left;
+  margin-right: 20px;
+}
+.flex-container {
+  display: flex;
+}
+
+.float-left {
+  flex: 1;
+}
+
+.float-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
 .sticky {
   position: fixed;
   top: 0;
@@ -388,32 +282,6 @@ section p {
 
 .navbar.transparent {
   background-color: transparent;
-}
-
-
-.dawn h1,
-.dawn p {
-  color: #F0E68C; /* light yellow */
-}
-
-.morning h1,
-.morning p {
-  color: #FFA07A; /* light salmon */
-}
-
-.afternoon h1,
-.afternoon p {
-  color: #FFD700; /* gold */
-}
-
-.evening h1,
-.evening p {
-  color: #87CEFA; /* light sky blue */
-}
-
-.night h1,
-.night p {
-  color: #B0C4DE; /* light steel blue */
 }
 .fa-github, .fa-linkedin, .fa-facebook, .fa-youtube{
   font-size: 48px;
