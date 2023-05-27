@@ -64,18 +64,40 @@ nav a {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  margin-bottom: 40px; /* Adjust the margin as per your requirements */
+  margin-bottom: 50px; /* Adjust the margin as per your requirements */
 }
 
 .social-icons a{
  padding-left: .25rem;
 }
+.my-name {
+  transition: all 0.4s;
+}
+.my-name:focus {
+  animation: bounce 0.4s cubic-bezier(0.59, -0.67, 0.24, 0.79) 2;
+  animation-direction: alternate;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-70px);
+  }
+}
+
 /* about section */
 .dark-theme-section {
   background-color: #37474f;
   color: #ffffff;
   padding: 20px;
 
+}
+.theme--dark.application {
+  background: #37474f;
+  color: #fff;
 }
 .text-design{
   font-size: 25px;
@@ -108,10 +130,12 @@ section {
   margin-top: -30px;
   position: relative;
   transition: background-position 0.3s ease-out;
+
 }
 
 
 #about {
+  margin-top: 10rem;
   position: relative;
   height: 1080px;
 }
