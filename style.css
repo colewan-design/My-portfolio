@@ -339,6 +339,57 @@ section p {
 .fa-instagram:hover {
   color: #C13584; /* Instagram's brand color */
 }
+/* Footer */
+footer {
+  background-color: #353232;
+  padding: 20px 0;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-left,
+.footer-middle,
+.footer-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.footer-right {
+  text-align: flex-end;
+}
+
+.icon-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.icon-links li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.icon-links li:last-child {
+  margin-right: 0;
+}
+.icon-links a .fa-instagram,
+.icon-links a .fa-github,
+.icon-links a .fa-linkedin,
+.icon-links a .fa-facebook,
+.icon-links a .fa-youtube {
+  font-size: 16px; /* Adjust the font size as per your preference */
+  color: #ada1a1;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
 
 
-
+.icon-links a:hover {
+  color: #aca4a4;
+}
