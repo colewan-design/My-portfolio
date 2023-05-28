@@ -1,4 +1,5 @@
 /*animation */
+ /* hand-wave animation */
 @keyframes wave-animation {
   0% { transform: rotate(0deg); }
   25% { transform: rotate(-30deg); }
@@ -7,6 +8,17 @@
   100% { transform: rotate(0deg); }
 }
 
+ /* typing animation */
+ .typing-animation {
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .15em;
+  animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+  font-size: 15px; /* Adjust the font size as per your requirements */
+}
+
+ /* Desktop Devices */
 .hand-wave {
   display: inline-block;
   animation-name: wave-animation;
@@ -21,399 +33,446 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Roboto', sans-serif; /* Updated font-family to use Roboto */
+  
 }
-.CC{
-  color: #f5f5f5;
-  padding: 1rem;
-}
-.v-btn{
-  height: 3rem;
-}
-
-nav {
-  position: fixed;
-  top: 0;
-  right: 0;
-  background-color: #fff;
-  padding: 10px;
-}
-
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-nav li {
-  display: inline-block;
-  margin-right: 20px;
-}
-
-nav a {
-  color: #333;
-  text-decoration: none;
-  font-size: 18px;
-}
-
-#text-container {
-  height: 30px; /* Adjust the height as per your requirements */
-}
-
-.social-icons {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  margin-bottom: 50px; /* Adjust the margin as per your requirements */
-}
-
-.social-icons a{
- padding-left: .25rem;
-}
-.my-name {
-  transition: all 0.4s;
-}
-.my-name:focus {
-  animation: bounce 0.4s cubic-bezier(0.59, -0.67, 0.24, 0.79) 2;
-  animation-direction: alternate;
-}
-
-@keyframes bounce {
-  0% {
-    transform: translateY(0);
+@media (min-width: 375px) {
+  .dark-theme-section {
+    background-color: #37474f;
+    color: #ffffff;
   }
-
-  100% {
-    transform: translateY(-70px);
+  .navbar {
+    background-color: rgba(255, 255, 255, 0.1);
+    align-items: center;
+    
+  }
+  .theme--dark.application {
+    background: #37474f;
+    color: #fff;
+  }
+  #home{
+  
   }
 }
+/* Mobile Styles */
+@media (min-width: 992px) {
+  /* Adjust the min-width value as per your requirements */
 
-/* about section */
-.dark-theme-section {
-  background-color: #37474f;
-  color: #ffffff;
-  padding: 20px;
-
-}
-.theme--dark.application {
-  background: #37474f;
-  color: #fff;
-}
-.text-design{
-  font-size: 25px;
-}
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-.dark-theme-section h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-.dark-theme-section p {
-  font-size: 16px;
-  margin-bottom: 10px;
-}
-
-section {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-#home {
-  height: 600px;
-  margin-top: -30px;
-  position: relative;
-  transition: background-position 0.3s ease-out;
-
-}
-
-
-#about {
-  margin-top: 10rem;
-  position: relative;
-  height: 1080px;
-}
-
-#about h2 {
-  font-size: 36px;
-  margin-bottom: 30px;
-}
-
-#about h3 {
-  font-size: 24px;
-  margin-bottom: 20px;
-}
-
-#about p {
-  font-size: 18px;
-  line-height: 1.5;
-}
-.set-width{
-  width: 20px;
-  padding: 50px;
-}
-
-#portfolio {
-height: 1080px;
-position: relative; /* Added position relative */
-}
-
-
-#contact {
-  background-size: cover;
-  background-position: center;
-  position: relative; /* Added position relative */
-}
-.text-align-center{
-  text-align: center;
-}
-.project-gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.project-item {
-  margin-left: 20px;
-  text-align: center;
-  position: relative;
-  transition: transform 0.3s;
-}
-
-.project-item:hover {
-  transform: scale(1.05);
-}
-
-.project-item img {
-  width: 100%;
-  max-width: 300px;
-  border: 2px solid #000;
-  border-radius: 5px;
-}
-
-.project-info {
-  margin-top: 10px;
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
-.project-item:hover .project-info {
-  opacity: 1;
-}
-
-.repo-link {
-  display: inline-block;
-  padding: 8px 16px;
-  background-color: #000;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-  margin-top: 10px;
-}
-
-.repo-link:hover {
-  background-color: #333;
-}
-.skillset{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-  margin-bottom: 20px;
-}
-
-.box {
-  width: 150px;
-  height: 100px;
-  background-color: #2e2b2b;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 16px;
-}
-
-
-.home-content {
-  z-index: 1;
-  text-align: center;
-  color: #070707;
-}
-
-section h1 {
-  font-size: 48px;
-  margin-bottom: 20px;
-}
-.center{
-  align-items: center;
-}
-section p {
-  font-size: 24px;
-  text-align: left;
-}
-.align-right{
-  text-align: left;
-}
-/* Added some styles for the Vuetify components */
-.v-navigation-drawer__content {
-  background-color: #f5f5f5;
-}
-
-.v-toolbar__title {
-  font-weight: bold;
-}
-
-.v-main {
-  margin-top: 64px; /* Added margin-top to adjust for the app bar */
-}
-
-.v-footer {
-  text-align: center;
-  background-color: #f5f5f5;
-  padding: 10px;
-}
-
-.about-float-left{
-  flex: 30%;
-}
-.about-float-right{
-  flex: 70%;
-}
-.float-right {
-  float: right;
-  margin-right: 20px;
-}
-.float-left {
-  float: left;
-  margin-right: 20px;
-}
-.flex-container {
-  display: flex;
-}
-
-.float-left {
-  flex: 1;
-}
-
-.float-right {
-  flex: 1;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-start;
-}
-
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: transparent;
-}
-.z-10 {
-  z-index: 10;
-}
-.navbar {
-  background-color: rgba(255, 255, 255, 0.1);
-  align-items: center;
-}
-
-.navbar.transparent {
-  background-color: transparent;
-}
-.fa-github, .fa-linkedin, .fa-facebook, .fa-youtube{
-  font-size: 48px;
-  color: white;
-  display: inline-block; 
-  }
-
-  .fa-instagram {
-    font-size: 48px;
-    color: #fff; /* Instagram's brand color */
-    mask-image: linear-gradient(to bottom right, transparent 50%, white 50%);
-    transition: mask-position 0.3s ease-in-out;
+   /* typing animation */
+   .typing-animation {
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+    font-size: 24px; /* Adjust the font size as per your requirements */
   }
   
-.fa-github:hover{
-  color: black !important;
-  border-radius: 50%; /* Add this line to make the background color circular */
-  transition: background-color 0.3s ease-in-out; /* Add this line for a smooth color transition */
-}
-.fa-linkedin:hover{
-  color: rgb(0, 119, 181) !important;
-  border-radius: 50%; /* Add this line to make the background color circular */
-  transition: background-color 0.3s ease-in-out; /* Add this line for a smooth color transition */
-}
-.fa-facebook:hover{
-  color: rgb(66, 103, 178) !important;
-  border-radius: 50%; /* Add this line to make the background color circular */
-  transition: background-color 0.3s ease-in-out; /* Add this line for a smooth color transition */
-}
-.fa-youtube:hover{
-  color: rgb(255, 0, 0) !important;
-  border-radius: 50%; /* Add this line to make the background color circular */
-  transition: background-color 0.3s ease-in-out; /* Add this line for a smooth color transition */
-}
-.fa-instagram:hover {
-  color: #C13584; /* Instagram's brand color */
-}
-/* Footer */
-footer {
-  background-color: #353232;
-  padding: 20px 0;
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  
+  .CC{
+    color: #f5f5f5;
+    padding: 1rem;
+  }
+  .v-btn{
+    height: 3rem;
+  }
+  
+  nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+    padding: 10px;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  
+  nav a {
+    color: #333;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  #text-container {
+    height: 30px; /* Adjust the height as per your requirements */
+  }
+  
+  .social-icons {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 50px; /* Adjust the margin as per your requirements */
+  }
+  
+  .social-icons a{
+   padding-left: .25rem;
+  }
+  .my-name {
+    transition: all 0.4s;
+  }
+  .my-name:focus {
+    animation: bounce 0.4s cubic-bezier(0.59, -0.67, 0.24, 0.79) 2;
+    animation-direction: alternate;
+  }
+  
+  @keyframes bounce {
+    0% {
+      transform: translateY(0);
+    }
+  
+    100% {
+      transform: translateY(-70px);
+    }
+  }
+  
+  /* about section */
+  .dark-theme-section {
+    background-color: #37474f;
+    color: #ffffff;
+    padding: 20px;
+  
+  }
+  .theme--dark.application {
+    background: #37474f;
+    color: #fff;
+  }
+  .text-design{
+    font-size: 25px;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .dark-theme-section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .dark-theme-section p {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  #home {
+    height: 600px;
+    margin-top: -30px;
+    position: relative;
+    transition: background-position 0.3s ease-out;
+  
+  }
+  
+  
+  #about {
+    margin-top: 10rem;
+    position: relative;
+    height: 1080px;
+  }
+  
+  #about h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+  }
+  
+  #about h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  #about p {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+  .set-width{
+    width: 20px;
+    padding: 50px;
+  }
+  
+  #portfolio {
+  height: 1080px;
+  position: relative; /* Added position relative */
+  }
+  
+  
+  #contact {
+    background-size: cover;
+    background-position: center;
+    position: relative; /* Added position relative */
+  }
+  .text-align-center{
+    text-align: center;
+  }
+  .project-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .project-item {
+    margin-left: 20px;
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s;
+  }
+  
+  .project-item:hover {
+    transform: scale(1.05);
+  }
+  
+  .project-item img {
+    width: 100%;
+    max-width: 300px;
+    border: 2px solid #000;
+    border-radius: 5px;
+  }
+  
+  .project-info {
+    margin-top: 10px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .project-item:hover .project-info {
+    opacity: 1;
+  }
+  
+  .repo-link {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+  }
+  
+  .repo-link:hover {
+    background-color: #333;
+  }
+  .skillset{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .box {
+    width: 150px;
+    height: 100px;
+    background-color: #2e2b2b;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+  }
+  
+  
+  .home-content {
+    z-index: 1;
+    text-align: center;
+    color: #070707;
+  }
+  
+  section h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+  .center{
+    align-items: center;
+  }
+  section p {
+    font-size: 24px;
+    text-align: left;
+  }
+  .align-right{
+    text-align: left;
+  }
+  /* Added some styles for the Vuetify components */
+  .v-navigation-drawer__content {
+    background-color: #f5f5f5;
+  }
+  
+  .v-toolbar__title {
+    font-weight: bold;
+  }
+  
+  .v-main {
+    margin-top: 64px; /* Added margin-top to adjust for the app bar */
+  }
+  
+  .v-footer {
+    text-align: center;
+    background-color: #f5f5f5;
+    padding: 10px;
+  }
+  
+  .about-float-left{
+    flex: 30%;
+  }
+  .about-float-right{
+    flex: 70%;
+  }
+  .float-right {
+    float: right;
+    margin-right: 20px;
+  }
+  .float-left {
+    float: left;
+    margin-right: 20px;
+  }
+  .flex-container {
+    display: flex;
+  }
+  
+  .float-left {
+    flex: 1;
+  }
+  
+  .float-right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
+  
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: transparent;
+  }
+  .z-10 {
+    z-index: 10;
+  }
+  .navbar {
+    background-color: rgba(255, 255, 255, 0.1);
+    align-items: center;
+  }
+  
+  .navbar.transparent {
+    background-color: transparent;
+  }
+  .fa-github, .fa-linkedin, .fa-facebook, .fa-youtube{
+    font-size: 48px;
+    color: white;
+    display: inline-block; 
+    }
+  
+    .fa-instagram {
+      font-size: 48px;
+      color: #fff; /* Instagram's brand color */
+      mask-image: linear-gradient(to bottom right, transparent 50%, white 50%);
+      transition: mask-position 0.3s ease-in-out;
+    }
+    
+  .fa-github:hover{
+    color: black !important;
+    border-radius: 50%; /* Add this line to make the background color circular */
+    transition: background-color 0.3s ease-in-out; /* Add this line for a smooth color transition */
+  }
+  .fa-linkedin:hover{
+    color: rgb(0, 119, 181) !important;
+    border-radius: 50%; /* Add this line to make the background color circular */
+    transition: background-color 0.3s ease-in-out; /* Add this line for a smooth color transition */
+  }
+  .fa-facebook:hover{
+    color: rgb(66, 103, 178) !important;
+    border-radius: 50%; /* Add this line to make the background color circular */
+    transition: background-color 0.3s ease-in-out; /* Add this line for a smooth color transition */
+  }
+  .fa-youtube:hover{
+    color: rgb(255, 0, 0) !important;
+    border-radius: 50%; /* Add this line to make the background color circular */
+    transition: background-color 0.3s ease-in-out; /* Add this line for a smooth color transition */
+  }
+  .fa-instagram:hover {
+    color: #C13584; /* Instagram's brand color */
+  }
+  /* Footer */
+  footer {
+    background-color: #353232;
+    padding: 20px 0;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-left,
+  .footer-middle,
+  .footer-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  .footer-right {
+    text-align: flex-end;
+  }
+  
+  .icon-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .icon-links li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  .icon-links li:last-child {
+    margin-right: 0;
+  }
+  .icon-links a .fa-instagram,
+  .icon-links a .fa-github,
+  .icon-links a .fa-linkedin,
+  .icon-links a .fa-facebook,
+  .icon-links a .fa-youtube {
+    font-size: 16px; /* Adjust the font size as per your preference */
+    color: #ada1a1;
+    display: inline-block;
+    transition: color 0.3s ease;
+  }
+  
+  
+  .icon-links a:hover {
+    color: #aca4a4;
+  }
+  #home {
+    font-size: 10px;
+  
+  
+  }
 }
 
-.footer-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-}
 
-.footer-left,
-.footer-middle,
-.footer-right {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-}
-.footer-right {
-  text-align: flex-end;
-}
-
-.icon-links {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.icon-links li {
-  display: inline-block;
-  margin-right: 10px;
-}
-
-.icon-links li:last-child {
-  margin-right: 0;
-}
-.icon-links a .fa-instagram,
-.icon-links a .fa-github,
-.icon-links a .fa-linkedin,
-.icon-links a .fa-facebook,
-.icon-links a .fa-youtube {
-  font-size: 16px; /* Adjust the font size as per your preference */
-  color: #ada1a1;
-  display: inline-block;
-  transition: color 0.3s ease;
-}
-
-
-.icon-links a:hover {
-  color: #aca4a4;
-}
