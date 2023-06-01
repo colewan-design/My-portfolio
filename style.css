@@ -29,7 +29,7 @@ body {
   font-family: 'Roboto', sans-serif; /* Updated font-family to use Roboto */
   
 }
-@media (max-width: 768px) {
+@media (max-width: 991px) {
   #home{
     padding-top: 12rem;
     position: relative;
