@@ -1,15 +1,7 @@
 /*animation */
- /* hand-wave animation */
-@keyframes wave-animation {
-  0% { transform: rotate(0deg); }
-  25% { transform: rotate(-30deg); }
-  50% { transform: rotate(0deg); }
-  75% { transform: rotate(30deg); }
-  100% { transform: rotate(0deg); }
-}
 
- /* typing animation */
- .typing-animation {
+/* typing animation */
+.typing-animation {
   overflow: hidden;
   white-space: nowrap;
   margin: 0 auto;
@@ -18,13 +10,9 @@
   font-size: 15px; /* Adjust the font size as per your requirements */
 }
 
+
  /* Mobile Styles */
-.hand-wave {
-  display: inline-block;
-  animation-name: wave-animation;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-}
+
 *{
   margin: 0;
   padding: 0;
@@ -34,6 +22,7 @@ html {
   scroll-behavior: smooth;
 }
 body {
+  background-color: white;
   margin: 0;
   padding: 0;
   font-family: 'Roboto', sans-serif; /* Updated font-family to use Roboto */
@@ -63,34 +52,14 @@ body {
   }
 }
 @media (max-width: 768px) {
- 
-  .dark-theme-section {
-    background-color: #37474f;
-    color: #ffffff;
-  }
 
-  .theme--dark.application {
-    background: #37474f;
-    color: #fff;
-  }
   #home{
     padding-top: 12rem;
     position: relative;
     text-align: center;
     height: 600px;
   }
-  .social-icons {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-bottom: 10rem; /* Adjust the margin as per your requirements */
-  }
-  
-  .social-icons a{
-   padding-left: .25rem;
-   color: white;
-  }
+
  
 }
 
@@ -106,6 +75,9 @@ body {
     letter-spacing: .15em;
     animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
     font-size: 24px; /* Adjust the font size as per your requirements */
+    padding-bottom: 10rem;
+    height: 50px;
+
   }
   
   @keyframes typing {
@@ -165,14 +137,14 @@ body {
   
   .navbar {
     overflow: hidden;
-    background-color: #333;
+    background-color: #000000;
   }
   
   .navbar a {
     float: left;
-    color: #f2f2f2;
+    color: #ffffff;
     text-align: center;
-    padding: 14px 16px;
+    padding: 22px 16px;
     text-decoration: none;
     font-size: 17px;
     position: relative;
@@ -180,10 +152,6 @@ body {
     overflow: hidden; /* Add overflow property to hide the overflow of pseudo-element */
   }
   
-  .navbar a.active {
-    background-color: #04AA6D;
-    color: white;
-  }
   
   .navbar a:before {
     content: '';
@@ -202,69 +170,37 @@ body {
     transform: scale(1) rotate(360deg);
   }
   
-  
-
-  
-  #text-container {
-    height: 30px; /* Adjust the height as per your requirements */
+  .hero {
+    font-size: 30px;
+    font-weight: 300;
+  }
+  .hero-description
+  {
+    font-size: 50px;
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+  .italicize {
+    font-style: italic; /* Apply italic font style */
+  }
+  .hero-button {
+    border: 1px solid #ccc; /* Set the border properties */
+    background-color: #2e2b2b; /* Set the background color */
+    color: white; /* Set the text color */
+    padding: 10px 20px; /* Set padding around the button text */
+    font-size: 16px; /* Set the font size */
+    border-radius: 5px; /* Set the border radius */
+    text-decoration: none;
   }
   
-  .social-icons {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-bottom: 50px; /* Adjust the margin as per your requirements */
-  }
+ 
   
-  .social-icons a{
-   padding-left: .25rem;
-  }
-  .my-name {
-    transition: all 0.4s;
-  }
-  .my-name:focus {
-    animation: bounce 0.4s cubic-bezier(0.59, -0.67, 0.24, 0.79) 2;
-    animation-direction: alternate;
-  }
-  
-  @keyframes bounce {
-    0% {
-      transform: translateY(0);
-    }
-  
-    100% {
-      transform: translateY(-70px);
-    }
-  }
-  
-  /* about section */
-  .dark-theme-section {
-    background-color: #37474f;
-    color: #ffffff;
-    padding: 20px;
-  
-  }
-  .theme--dark.application {
-    background: #37474f;
-    color: #fff;
-  }
   .text-design{
     font-size: 25px;
   }
   ul {
     list-style: none;
     padding: 0;
-  }
-  
-  .dark-theme-section h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-  
-  .dark-theme-section p {
-    font-size: 16px;
-    margin-bottom: 10px;
   }
   
   section {
@@ -277,32 +213,15 @@ body {
   
   #home {
     height: 600px;
-    margin-top: -30px;
     position: relative;
     transition: background-position 0.3s ease-out;
   
   }
-  
-  
-  #about {
-    margin-top: 10rem;
+  #skills {
+    height: 720px;
     position: relative;
-    height: 1080px;
-  }
-  
-  #about h2 {
-    font-size: 36px;
-    margin-bottom: 30px;
-  }
-  
-  #about h3 {
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-  
-  #about p {
-    font-size: 18px;
-    line-height: 1.5;
+    transition: background-position 0.3s ease-out;
+
   }
   .set-width{
     width: 20px;
@@ -310,16 +229,16 @@ body {
   }
   
   #portfolio {
-  height: 1080px;
+  height: 1200px;
   position: relative; /* Added position relative */
   }
-  
-  
-  #contact {
-    background-size: cover;
-    background-position: center;
+  #portfolio h1{
+
+    }
+  #certificates {
+    height: 1080px;
     position: relative; /* Added position relative */
-  }
+    }
   .text-align-center{
     text-align: center;
   }
@@ -330,7 +249,7 @@ body {
   }
   
   .project-item {
-    margin-left: 20px;
+    margin: 0 20px;
     text-align: center;
     position: relative;
     transition: transform 0.3s;
@@ -371,7 +290,7 @@ body {
   .repo-link:hover {
     background-color: #333;
   }
-  .skillset{
+  .skillset {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -382,102 +301,51 @@ body {
   .box {
     width: 150px;
     height: 100px;
-    background-color: #2e2b2b;
     border: 1px solid #ccc;
     border-radius: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 16px;
+    color: rgb(0, 0, 0);
   }
   
-  
+  .box i {
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
   .home-content {
-    z-index: 1;
     text-align: center;
-    color: #070707;
   }
-  
-  section h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
+
+/* About section*/
+  .profile-image{
+    height:200px;
   }
-  .center{
-    align-items: center;
+  .about-description{
+    padding-left: 2rem;
   }
-  section p {
-    font-size: 24px;
-    text-align: left;
-  }
-  .align-right{
-    text-align: left;
-  }
-  /* Added some styles for the Vuetify components */
-  .v-navigation-drawer__content {
-    background-color: #f5f5f5;
-  }
-  
-  .v-toolbar__title {
-    font-weight: bold;
-  }
-  
-  .v-main {
-    margin-top: 64px; /* Added margin-top to adjust for the app bar */
-  }
-  
-  .v-footer {
-    text-align: center;
-    background-color: #f5f5f5;
-    padding: 10px;
-  }
-  
-  .about-float-left{
-    flex: 30%;
-  }
-  .about-float-right{
-    flex: 70%;
-  }
-  .float-right {
-    float: right;
-    margin-right: 20px;
-  }
-  .float-left {
-    float: left;
-    margin-right: 20px;
-  }
+
   .flex-container {
     display: flex;
-  }
-  
-  .float-left {
-    flex: 1;
-  }
-  
-  .float-right {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
   }
   
   .sticky {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: transparent;
-  }
-  .z-10 {
-    z-index: 10;
+    background-color: black;
   }
 
+
   .fa-github, .fa-linkedin, .fa-facebook, .fa-youtube{
-    font-size: 48px;
+    font-size: 30px;
     color: white;
     display: inline-block; 
     }
   
     .fa-instagram {
-      font-size: 48px;
+      font-size: 30px;
       color: #fff; /* Instagram's brand color */
       mask-image: linear-gradient(to bottom right, transparent 50%, white 50%);
       transition: mask-position 0.3s ease-in-out;
@@ -508,14 +376,15 @@ body {
   }
   /* Footer */
   footer {
-    background-color: #353232;
+    background-color: #000000;
     padding: 20px 0;
   }
   
   .footer-container {
+    align-items: center;
+    color: white;
     display: flex;
     justify-content: space-between;
-    align-items: center;
     max-width: 1200px;
     margin: 0 auto;
   }
@@ -551,7 +420,7 @@ body {
   .icon-links a .fa-facebook,
   .icon-links a .fa-youtube {
     font-size: 16px; /* Adjust the font size as per your preference */
-    color: #ada1a1;
+    color: #ffffff;
     display: inline-block;
     transition: color 0.3s ease;
   }

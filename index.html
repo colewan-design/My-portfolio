@@ -3,10 +3,12 @@
 
 <head>
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/vuetify@1.x/dist/vuetify.min.css" rel="stylesheet">
+  <!-- Main CSS -->
   <link rel="stylesheet" href="style.css">
- 
-  <link href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" rel="stylesheet">
+   <!-- Bootstrap link -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+   <!-- Fontawesome link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <!-- Include the library. -->
@@ -28,8 +30,7 @@ href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.c
   <div id="fb-root"></div>
 
   <!-- Your Chat Plugin code -->
-  <div id="fb-customer-chat" class="fb-customerchat">
-  </div>
+  <div id="fb-customer-chat" class="fb-customerchat"></div>
 
   <script>
     var chatbox = document.getElementById('fb-customer-chat');
@@ -55,119 +56,119 @@ href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.c
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
   </script>
-  
-  <div id="app" href="#home">
-    <v-app dark>
-      <v-main>
-        <v-container  fluid full-width class="px-0">
+    <div>
        
-          <div class="sticky z-10 navbar">
-            <div class="float-right" id="myNavbar">
-              <a href="#home">Home</a>
-              <a href="#about">About</a>
-              <a href="#portfolio">Projects</a>
-              <a href="#certificate">Certificates</a>
-              <a href="assets/resume.pdf" target="_blank" download>Resume</a>
-              <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                <i class="fa fa-bars"></i>
-              </a>
-            </div>
+          <!-- Header & Navbar -->
+            <header class="fixed-top">
+              <nav class="container-xxl navbar navbar-expand-sm py-1">
+                <div class="container-fluid">
+                  <div class="CC"></div>
+                  <a class="navbar-brand" href="#">Christian Colewan</a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                      <li class="nav-item mx-2">
+                        <a href="#skills">Skills</a>
+                      </li>
+                      <li class="nav-item mx-2">
+                        <a href="#about">About</a>
+                      </li>
+                      <li class="nav-item mx-2">
+                        <a href="#portfolio">Projects</a>
+                      </li>
+                      <li class="nav-item mx-2">
+                        <a href="#certificate">Certificates</a>
+                      </li>
+                      <li class="nav-item mx-2">
+                        <a href="assets/resume.pdf" target="_blank" download>Resume</a>
+                      </li>
+                  </div>
+                </div>
+              </nav>
+            </header>
 
-            <div class="CC"></div>
+          
+          
+
+            <section id="home">
+              <div class="home-content">
+                <h1 class="h1 fw-medium fst-italic">Christian Colewan</h1>
+                <h2 class="display-3 fw-bold">Information Technology Student</h2>
+              </div>
             
-          </div>
+              <div style="position: relative;">
+                <div id="text-container" class="typing-animation"></div>
+              </div>
+            
+              <div>
+                <a href="#about" class="hero-button">Tell me more</a>
+              </div>
+            </section>
+            
           
 
-          <section id="home" class="relative dark-theme-section">
-            <v-row>
-              <v-col cols="12">
-                <div class="home-content">
-                  <h2 class="align-right">
-                    Hi there! <span class="hand-wave">👋🏻</span>
-                  </h2>                  
-                  <h1 class="my-name">My name is Christian Colewan</h1>
-                  <div id="text-container" class="typing-animation"></div>
+
+          <section id="about" class="container py-5">
+            <div class="row mt-4 py-3">
+              <h2 class="center">About</h2>
+                <div>
+                  <div class="flex-container">
+                    <div>
+                      <img src="images/me.jpg" alt="Profile Image" class="profile-image">
+                    </div>
+                    <div class="about-description">
+                      <p class="lead">
+                        Hi everyone, I am <span class="text-design">Christian</span>, from <span class="text-design">Baguio, Philippines</span>.
+                        I am a motivated, focused, and patient individual who loves taking on new challenges and delivering exceptional results.
+                      </p>
+                      <div>
+                        <p>
+                          Apart from coding, here are some other activities that I love to do!
+                        </p>
+                        <ul>
+                          <li><i class="fas fa-bicycle"></i> Bike Touring</li>
+                          <li><i class="fas fa-film"></i> Watching Movies</li>
+                          <li><i class="fas fa-gamepad"></i> Online Games</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </v-col>
-            </v-row>
-            <div class="social-icons">
-              <a href="https://github.com/colewan-design" target="_blank" class="icon"><i class="fab fa-github"></i></a>
-              <a href="https://www.linkedin.com/in/christian-colewan-a936b713a/" class="icon" target="_blank"><i class="fab fa-linkedin"></i></a>
-              <a href="https://www.facebook.com/montblanc321" target="_blank" class="icon"><i class="fab fa-facebook"></i></a>
-              <a href="https://www.youtube.com/channel/UCjoB8Uuu4symlj4nIgcrS7g" target="_blank" class="icon"><i class="fab fa-youtube"></i></a>
-              <a href="https://www.instagram.com/teekunana/" target="_blank" class="icon"><i class="fab fa-instagram"></i></a>
+            </div>
+           
+          </section>
+          <section id="skills">
+            <div>
+              <h3 class="skillset center">Professional Skillset</h3>
+              <div class="skillset">
+                <div class="box"><i class="fab fa-php"></i> PHP</div>
+                <div class="box"><i class="fab fa-laravel"></i> Laravel</div>
+                <div class="box"><i class="fab fa-vuejs"></i> Vue</div>
+                <div class="box"><i class="fas fa-database"></i> MYSQL</div>
+                <div class="box"><i class="fab fa-html5"></i> HTML</div>
+                <div class="box"><i class="fab fa-css3-alt"></i> CSS</div>
+                <div class="box"><i class="fas fa-database"></i> PGSQL</div>
+                <div class="box"><i class="fab fa-git"></i> Git</div>
+              </div>
+            </div>
+            <div>
+              <h3 class="skillset text-white center">Days | Code</h3>
+              <div class="calendar">
+                <!-- Loading stuff -->
+                Loading the data just for you.
+              </div>
             </div>
           </section>
           
-
-
-          <section id="about" class="dark-theme-section">
-            <h2 class="text-white center">My Story</h2>
-            <v-container>
-              
-              <div class="flex-container">
-                
-                <div class="about-float-left">
-                  <img src="images/me.jpg" alt="Profile Image" height="200px">
-                </div>
-                <div class="about-float-right">
-                  
-                  <p class="lead text-white" style="font-size: 18px;">
-                 Hi everyone, I am <span class="text-design">Christian</span>, from <span class="text-design">Baguio, Philippines</span>.
-                 I am a motivated, focused, and patient individual who loves taking on new challenges and delivering exceptional results.
-                  </p>
-                  <div>
-                    <p>
-                      Apart from coding, here are some other activities that I love to do!
-                   </p>
-                   <ul>
-                    <li><i class="fas fa-bicycle"></i> Bike Touring</li>
-                    <li><i class="fas fa-film"></i> Watching Movies</li>
-                    <li><i class="fas fa-gamepad"></i> Online Games</li>
-                  </ul>
-                  </div>
-                 
-                  
-                  </div>
-                 
-                  
-              </div>
-              <div>
-                 
-                <h3 class="skillset text-white center">Professional Skillset</h3>
-  
-                <div class="skillset">
-                  <div class="box">php</div>
-                  <div class="box">laravel</div>
-                  <div class="box">vue</div>
-                  <div class="box">mysql</div>
-                  <div class="box">html</div>
-                  <div class="box">css</div>
-                  <div class="box">pgsql</div>
-                  <div class="box">git</div>
-                </div>
-              </div>
-              <div>
-                <!-- Prepare a container for your calendar. -->
-                <h3 class="skillset text-white center">Days | Code</h3>
-               <div class="calendar">
-                 <!-- Loading stuff -->
-                 Loading the data just for you.
-               </div>
-               </div>
-            </v-container>
-          </section>
-          
-          
-          <section id="portfolio" class="dark-theme-section text-align-center">
-            <v-container>
-              <v-row>
-                <v-col cols="12">
-                  <h1 class="text-white">Projects</h1>
-                </v-col>
-              </v-row>
-              <v-row class="project-gallery">
-                <v-col cols="4">
+          <section id="portfolio" class="container py-5">
+            <div class="row">
+              <h1>Projects</h1>
+            </div>
+            <div class="row">
+              <div class="col-md-4">
+                <div class="project-gallery">
                   <div class="project-item">
                     <img src="images/project1.png" alt="Project 1">
                     <div class="project-info">
@@ -175,8 +176,10 @@ href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.c
                       <a href="https://github.com/colewan-design/KelloWoodBuilders" target="_blank" class="repo-link">GitHub Repo</a>
                     </div>
                   </div>
-                </v-col>
-                <v-col cols="4">
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="project-gallery">
                   <div class="project-item">
                     <img src="images/project2.png" alt="Project 2">
                     <div class="project-info">
@@ -184,129 +187,138 @@ href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.c
                       <a href="https://github.com/colewan-design/laptop-landing-page" target="_blank" class="repo-link">GitHub Repo</a>
                     </div>
                   </div>
-                </v-col>
-                <v-col cols="4">
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="project-gallery">
                   <div class="project-item">
                     <img src="images/project3.png" alt="Project 3">
                     <div class="project-info">
                       <h3>Music Player</h3>
-                     
                       <a href="https://github.com/colewan-design/music-player" target="_blank" class="repo-link">GitHub Repo</a>
                     </div>
                   </div>
-                </v-col>
-              </v-row>
-              <!--new row-->
-              <v-row class="project-gallery">
-                <v-col cols="4">
+                </div>
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="col-md-4">
+                <div class="project-gallery">
                   <div class="project-item">
                     <img src="images/project4.png" alt="Project 4">
                     <div class="project-info">
                       <h3>Movie Site | IMDB API</h3>
-                    
                       <a href="https://github.com/colewan-design/movie-site" target="_blank" class="repo-link">GitHub Repo</a>
                     </div>
                   </div>
-                </v-col>
-                <v-col cols="4">
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="project-gallery">
                   <div class="project-item">
                     <img src="images/project5.png" alt="Project 5">
                     <div class="project-info">
                       <h3>Fake Store | FAKE STORE API</h3>
-                     
                       <a href="https://github.com/colewan-design/fake-store-api" target="_blank" class="repo-link">GitHub Repo</a>
                     </div>
                   </div>
-                </v-col>
-                <v-col cols="4">
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="project-gallery">
                   <div class="project-item">
                     <img src="images/project6.png" alt="Project 6">
                     <div class="project-info">
                       <h3>CBOO Payroll System</h3>
-                     
                       <a href="https://github.com/colewan-design/Payroll" target="_blank" class="repo-link">GitHub Repo</a>
                     </div>
                   </div>
-                </v-col>
-              </v-row>
-              <!--new row-->
-              <v-row class="project-gallery">
-                <v-col cols="4">
+                </div>
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="col-md-4">
+                <div class="project-gallery">
                   <div class="project-item">
                     <img src="images/project7.png" alt="Project 7">
                     <div class="project-info">
                       <h3>Accident Prediction System</h3>
-                    
                       <a href="https://github.com/colewan-design/accident-prediction-system" target="_blank" class="repo-link">GitHub Repo</a>
                     </div>
                   </div>
-                </v-col>
-                <v-col cols="4">
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="project-gallery">
                   <div class="project-item">
                     <img src="images/project8.png" alt="Project 8">
                     <div class="project-info">
                       <h3>Student Management Suite</h3>
-                    
                       <a href="https://github.com/colewan-design/student-management-suite" target="_blank" class="repo-link">GitHub Repo</a>
                     </div>
                   </div>
-                </v-col>
-                <v-col cols="4">
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="project-gallery">
                   <div class="project-item">
-                    <img src="images/project9.png" alt="Project 9">
+                    <img src="images/project9.png" alt="Project9">
                     <div class="project-info">
                       <h3>Dental Clinic Management System</h3>
-                    
                       <a href="https://github.com/colewan-design/dental-clinic-management-system" target="_blank" class="repo-link">GitHub Repo</a>
                     </div>
                   </div>
-                </v-col>
-              
-              </v-row>
-              <v-row>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
                 <div class="contribution-grid" id="contribution-grid"></div>
-              </v-row>
-            </v-container>
+              </div>
+            </div>
+            
           </section>
 
-          <section id="certificate" class="dark-theme-section text-align-center">
-            <v-container>
-              <v-row>
-                <v-col cols="12">
-                  <h1 class="text-white">Certificates</h1>
-                </v-col>
-              </v-row>
-              <v-row class="project-gallery">
-                <v-col cols="4">
+          <section id="certificate">
+            <div>
+              <h1>Certificates</h1>
+            </div>
+            <div class="row">
+              <div class="col-md-4">
+                <div class="project-gallery">
                   <div class="project-item">
                     <img src="images/CyberSecurity and Ethical Hacking Workshop.png" alt="Project 1">
                     <div class="project-info">
                       <h3>CyberSecurity and Ethical Hacking Workshop</h3>
                     </div>
                   </div>
-                </v-col>
-                <v-col cols="4">
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="project-gallery">
                   <div class="project-item">
                     <img src="images/Data Privacy and Security.jpg" alt="Project 2">
                     <div class="project-info">
                       <h3>Data Privacy and Security</h3>
-                     
                     </div>
                   </div>
-                </v-col>
-                <v-col cols="4">
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="project-gallery">
                   <div class="project-item">
                     <img src="images/Fundamentals of web development.JPG" alt="Project 3">
                     <div class="project-info">
                       <h3>Fundamentals of web development</h3>
-                     
-                     
                     </div>
                   </div>
-                </v-col>
-              </v-row>
-            </v-container>
+                </div>
+              </div>
+            </div>
           </section>
+          
           <footer>
             <div class="footer-container">
               <div class="footer-left">
@@ -319,28 +331,18 @@ href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.c
           
               <div class="footer-right">
                 <ul class="icon-links">
-                  <li><a href="https://www.youtube.com"><i class="fab fa-youtube"></i></a></li>
-                  <li><a href="https://www.facebook.com"><i class="fab fa-facebook"></i></a></li>
-                  <li><a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a></li>
-                  <li><a href="https://www.linkedin.com"><i class="fab fa-linkedin"></i></a></li>
-                  <li><a href="https://www.github.com"><i class="fab fa-github"></i></a></li>
+                  <li><a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                  <li><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                  <li><a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                  <li><a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                  <li><a href="https://www.github.com" target="_blank"><i class="fab fa-github"></i></a></li>
                 </ul>
               </div>
               
             </div>
           </footer>
           
-        </v-container>
-      </v-main>
-
-      <v-footer app>
-        <span>&copy; {{ new Date().getFullYear() }} Christian Colewan</span>
-      </v-footer>
-    </v-app>
-  </div>
-
-  <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vuetify@1.x/dist/vuetify.js"></script>
+        </div>
 
   <script>
     const paragraphs = [
@@ -348,9 +350,6 @@ href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.c
       "Developer",
       "Information System",
       "Full Stack Developer",
-      "Front-End",
-      "Back-End",
-      "Data Base Management",
     ];
 
     let currentParagraphIndex = 0;
@@ -390,22 +389,21 @@ href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.c
     typeText(); // Start the animation
 
   </script>
-<script>
-  GitHubCalendar(".calendar", "colewan-design");
-
-  // or enable responsive functionality:
-  GitHubCalendar(".calendar", "colewan-design", { responsive: true });
-
-  // Use a proxy
-  GitHubCalendar(".calendar", "colewan-design", {
-     proxy (username) {
-       return fetch(`https://your-proxy.com/github?user=${username}`)
-     }
-  }).then(r => r.text())
-</script>
   <script>
-    new Vue({ el: '#app' })
+    GitHubCalendar(".calendar", "colewan-design");
+
+    // or enable responsive functionality:
+    GitHubCalendar(".calendar", "colewan-design", { responsive: true });
+
+    // Use a proxy
+    GitHubCalendar(".calendar", "colewan-design", {
+      proxy (username) {
+        return fetch(`https://your-proxy.com/github?user=${username}`)
+      }
+    }).then(r => r.text())
   </script>
-   <script src="script.js"></script>
+  <script src="script.js"></script>
+  <!-- Bootstrap script link -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
 </html>
