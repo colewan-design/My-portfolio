@@ -55,22 +55,28 @@ href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.c
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
   </script>
+  
   <div id="app" href="#home">
     <v-app dark>
       <v-main>
         <v-container  fluid full-width class="px-0">
        
           <div class="sticky z-10 navbar">
-            <v-toolbar-items class="hidden-sm-and-down float-right v-btn">
-              <v-btn text href="#home">Home</v-btn>
-              <v-btn text href="#about">About</v-btn>
-              <v-btn text href="#portfolio">Projects</v-btn>
-              <v-btn text href="assets/resume.pdf" target="_blank" download>Resume</v-btn>
+            <div class="float-right" id="myNavbar">
+              <a href="#home">Home</a>
+              <a href="#about">About</a>
+              <a href="#portfolio">Projects</a>
+              <a href="#certificate">Certificates</a>
+              <a href="assets/resume.pdf" target="_blank" download>Resume</a>
+              <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+              </a>
+            </div>
 
-            </v-toolbar-items>
-            <h1 href="#home" class="CC"> CC </h1>
-            <v-spacer></v-spacer>
+            <div class="CC"></div>
+            
           </div>
+          
 
           <section id="home" class="relative dark-theme-section">
             <v-row>
@@ -263,7 +269,7 @@ href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.c
             </v-container>
           </section>
 
-          <section id="portfolio" class="dark-theme-section text-align-center">
+          <section id="certificate" class="dark-theme-section text-align-center">
             <v-container>
               <v-row>
                 <v-col cols="12">
@@ -338,7 +344,6 @@ href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.c
 
   <script>
     const paragraphs = [
-      "Welcome to my portfolio website!",
       "Programmer",
       "Developer",
       "Information System",
