@@ -18,6 +18,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+ 
 }
 html {
   scroll-behavior: smooth;
@@ -285,12 +286,7 @@ nav{
     font-size: 30px;
     font-weight: 300;
   }
-  .hero-description
-  {
-    font-size: 50px;
-    padding-left: 5rem;
-    padding-right: 5rem;
-  }
+
   .italicize {
     font-style: italic; /* Apply italic font style */
   }
@@ -424,6 +420,12 @@ nav{
   }
   .home-content {
     text-align: center;
+  }
+  .home-content h1{
+    font-size: 1.5rem;
+  }
+  .home-content h2{
+    font-size: 3rem;
   }
 
 /* About section*/
