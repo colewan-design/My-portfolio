@@ -32,7 +32,7 @@ export default {
   metaInfo() {
     return {
       title: this.result.title,
-      titleTemplate: "%s ← Eldin's Blog",
+      titleTemplate: "%s ← christian's Blog",
       meta: [
         { name: "viewport", content: "width=device-width, initial-scale=1" },
         {
@@ -40,10 +40,10 @@ export default {
           content: this.result.content
         },
         { charset: "utf-8" },
-        { property: "og:title", content: "Eldin' Space" },
-        { property: "og:site_name", content: "Eldin' Space" },
+        { property: "og:title", content: "christian' Space" },
+        { property: "og:site_name", content: "christian' Space" },
         { property: "og:type", content: "website" },
-        { property: "og:url", content: "https://eldin.space" },
+        { property: "og:url", content: "https://christian.space" },
         {
           property: "og:image",
           content: "https://i.imgur.com/Dcz2PGx.jpg"
