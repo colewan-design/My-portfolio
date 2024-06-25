@@ -61,8 +61,26 @@ nav ul li a:hover {
     color: #ffcc00;
 }
 
+/* news feed */
+.news-feed {
+    margin-top: 20px; /* Adjust margin as needed */
+    text-align: center; /* Center align content */
+}
+
+.project-screenshot {
+    max-width: 100%; /* Ensure the image doesn't overflow its container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+
 /* Styles for mobile view (max-width: 768px) */
 @media (max-width: 768px) {
+    .project-screenshot {
+        width: 90%; /* Full width on smaller screens */
+    }
+    .logo-name {
+        height: 90%; /* Full width on smaller screens */
+    }
     .burger-menu {
         display: block;
         cursor: pointer;

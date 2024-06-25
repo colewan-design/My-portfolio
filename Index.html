@@ -1,27 +1,56 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
- 
-    <link rel="stylesheet" href="style.css">
-    <title>ColewanDev</title>
-   
-</head>
-<body>
-    <header>
-        <div class="logo">
-            <img src="public/logo.png" alt="ColewanDev Logo">
-        </div>
-        <nav>
-            <div class="burger-menu">&#9776;</div>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<!doctype html>
+<html>
 
-    <script src="script.js"></script>
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@3.x/css/materialdesignicons.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css" />
+</head>
+
+<body>
+    <div id="app">
+        <v-app>
+            <v-app-bar app color="cyan">
+                <v-avatar
+                size="36px"
+                >
+                <v-img
+                    alt="Avatar"
+                    src="public/logo.png"
+                ></v-img>
+                </v-avatar>
+                 
+            </v-app-bar>
+            <v-container class="mt-10">
+                   <v-row class="mt-10">
+                        <v-col cols="12">
+                            <v-card>
+                            <v-img
+                                class="bg-grey-lighten-2"
+                                height="125"
+                                src="public/cboo-login.png"
+                                cover
+                            ></v-img>
+                            <v-card-title class="text-h6">
+                               CBOO Payroll System
+                            </v-card-title>
+                            </v-card>
+                        </v-col>
+                   </v-row>
+                  
+            </v-container>
+        </v-app>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
 </body>
+<script>
+    new Vue({
+        el: '#app',
+        vuetify: new Vuetify()
+    })
+</script>
+
 </html>
