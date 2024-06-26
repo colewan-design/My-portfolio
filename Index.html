@@ -13,58 +13,99 @@
     <div id="app">
         <v-app>
             <v-app-bar app color="teal" height="100">
-              <a href="Index.html">
-                <v-avatar size="50px">
-                  <v-img
-                    alt="Avatar"
-                    src="public/logo.png"
-                  ></v-img>
-                </v-avatar>
-              </a>
+              <v-container>
+                <v-row>
+                    <v-col>
+                        <a href="Index.html">
+                            <v-avatar size="70px">
+                                <v-img
+                                    alt="Avatar"
+                                    src="public/logo.png"
+                                ></v-img>
+                            </v-avatar>
+                        </a>
+                    </v-col>
+                    <v-col class="text-right" style="padding-top: 1.5rem;">
+                        <v-btn
+                            text
+                            @click="sheet = !sheet"
+                        >
+                        <v-icon size="50px" class="mdi mdi-menu"></v-icon>
+                        </v-btn>
+                    </v-col>
+                </v-row>
+              </v-container>
+              
             </v-app-bar>
             <v-container class="mt-10">
-              <v-row class="mt-10">
-                <v-col class="text-center">
-                  ColewanDev
-                </v-col>
-              </v-row>
-              <v-row>
-                <v-col>
-                    <v-carousel >
-                        <v-carousel-item
-                        src="public/cboo-login.png"
-                        cover
-                        ></v-carousel-item>
-                    
-                        <v-carousel-item
-                        src="public/help-page.png"
-                        cover
-                        ></v-carousel-item>
-                    
-                        <v-carousel-item
-                        src="public/positions-page.png"
-                        cover
-                        ></v-carousel-item>
-                        <v-carousel-item
-                        src="public/table-sample.png"
-                        cover
-                    ></v-carousel-item>
-                  </v-carousel>
-                </v-col>
-              </v-row>
+                <v-row class="mt-10">
+                    <v-col class="text-center">
+                        ColewanDev
+                    </v-col>
+                </v-row>
+                <v-row>
+                    <v-col>
+                        <v-carousel>
+                            <v-carousel-item
+                                src="public/cboo-login.png"
+                                cover
+                            ></v-carousel-item>
+                            <v-carousel-item
+                                src="public/help-page.png"
+                                cover
+                            ></v-carousel-item>
+                            <v-carousel-item
+                                src="public/positions-page.png"
+                                cover
+                            ></v-carousel-item>
+                            <v-carousel-item
+                                src="public/table-sample.png"
+                                cover
+                            ></v-carousel-item>
+                        </v-carousel>
+                        <p class="text-caption">Payroll System</p>
+                    </v-col>
+                </v-row>
+              
+              
             </v-container>
-          </v-app>
-          
+            <v-bottom-sheet v-model="sheet" >
+                <v-card class="text-center" height="500">
+                    <v-card-text>
+                        <v-btn variant="text"@click="sheet = !sheet">
+                            close
+                        </v-btn>
+                        <v-container>
+                            <v-row>
+                                <v-col>
+                                    <v-btn text block size="x-large">Contact </v-btn>
+                                </v-col>
+                            </v-row>
+                            <v-row>
+                                <v-col>
+                                    <v-btn text block size="x-large">About </v-btn>
+                                </v-col>
+                            </v-row>
+                        </v-container>
+
+                       
+                    </v-card-text>
+                </v-card>
+            </v-bottom-sheet>
+        </v-app>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            vuetify: new Vuetify(),
+            data: () => ({
+                sheet: false,
+            }),
+        });
+    </script>
 </body>
-<script>
-    new Vue({
-        el: '#app',
-        vuetify: new Vuetify()
-    })
-</script>
 
 </html>
