@@ -1,11 +1,25 @@
+/* Default styles (for both mobile and desktop) */
+.project-screenshot {
+    width: 90%; /* Full width on smaller screens */
+}
 
+.burger-menu {
+    display: none; /* Hide burger menu icon on desktop */
+}
+
+nav ul {
+    display: flex !important; /* Ensure menu is visible on desktop */
+}
 
 /* Styles for mobile view (max-width: 768px) */
 @media (max-width: 768px) {
-    .project-screenshot {
-        width: 90%; /* Full width on smaller screens */
+    .v-toolbar__content {
+        height: 100px; /* Adjust the height of v-app-bar for mobile */
     }
-   
+
+    .v-img {
+        height: auto !important; /* Ensure images adjust height appropriately */
+    }
 }
 
 /* Styles for desktop view (min-width: 769px) */
@@ -13,6 +27,7 @@
     .burger-menu {
         display: none; /* Hide burger menu icon on desktop */
     }
+
     nav ul {
         display: flex !important; /* Ensure menu is visible on desktop */
     }
