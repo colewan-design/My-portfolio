@@ -12,44 +12,39 @@
 <body>
     <div id="app">
         <v-app>
-            <v-app-bar app color="teal">
-                <a href="Index.html">
-                    <v-avatar
-                    size="36px"
-                    >
-                    <v-img
-                        
-                        alt="Avatar"
-                        src="public/logo.png"
-                    ></v-img>
-                    </v-avatar>
-                </a>
-                 
+            <v-app-bar app color="teal" height="100">
+              <a href="Index.html">
+                <v-avatar size="50px">
+                  <v-img
+                    alt="Avatar"
+                    src="public/logo.png"
+                  ></v-img>
+                </v-avatar>
+              </a>
             </v-app-bar>
             <v-container class="mt-10">
-                <v-row class="mt-10">
-                    <v-col class="text-center">
-                        ColewanDev
-                    </v-col>
-                </v-row>
-                   <v-row >
-                        <v-col cols="12">
-                            <v-card  href="pages/cboo-payroll-system/index.html">
-                            <v-img 
-                                class="bg-grey-lighten-2"
-                                height="50vh"
-                                src="public/cboo-login.png"
-                                cover
-                            ></v-img>
-                            <v-card-title class="text-h6">
-                               CBOO Payroll System
-                            </v-card-title>
-                            </v-card>
-                        </v-col>
-                   </v-row>
-                  
+              <v-row class="mt-10">
+                <v-col class="text-center">
+                  ColewanDev
+                </v-col>
+              </v-row>
+              <v-row>
+                <v-col cols="12">
+                  <v-card href="pages/cboo-payroll-system/index.html">
+                    <v-img 
+                      class="bg-grey-lighten-2"
+                      src="public/cboo-login.png"
+                      contain
+                    ></v-img>
+                    <v-card-title class="text-h6">
+                      CBOO Payroll System
+                    </v-card-title>
+                  </v-card>
+                </v-col>
+              </v-row>
             </v-container>
-        </v-app>
+          </v-app>
+          
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
