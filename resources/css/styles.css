@@ -104,6 +104,16 @@ section {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     max-width: 800px;
 }
+section h4 {
+    margin-bottom: 1rem;
+    color: #333;
+}
+section p {
+    margin: 0.5rem 0;
+}
+section span {
+    font-weight: bold;
+}
 
 .project {
     margin-bottom: 2em;
