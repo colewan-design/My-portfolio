@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Christian Colewan</title>
     <link rel="stylesheet" href="resources/css/styles.css">
+    <link rel="stylesheet" href="resources/css/carousel.css">
+   
 </head>
 <body>
     <nav>
@@ -20,22 +22,20 @@
         <h1>Portfolio</h1>
     </header>
     <section>
-        <h2>Featured Projects</h2>
-        <div class="project">
-            <h3>Project 1: E-commerce Website</h3>
-            <p>This is a fully functional e-commerce website built with Laravel and Vue.js. It features a user-friendly interface, secure payment gateway integration, and an admin panel for managing products, orders, and users.</p>
-            <img src="resources/images/ecommerce.png" alt="E-commerce Website Screenshot">
-        </div>
-        <div class="project">
-            <h3>Project 2: Blogging Platform</h3>
-            <p>A modern blogging platform developed using Laravel and Vue.js. It allows users to create and manage blog posts, comment on articles, and follow their favorite authors. The platform includes a robust admin panel for managing content and users.</p>
-            <img src="resources/images/blogging.png" alt="Blogging Platform Screenshot">
-        </div>
-        <div class="project">
-            <h3>Project 3: Task Management App</h3>
-            <p>This is a task management application designed to help users organize their tasks and projects. Built with Laravel and Vue.js, it features drag-and-drop functionality, real-time collaboration, and a clean, intuitive interface.</p>
-            <img src="resources/images/taskmanagement.png" alt="Task Management App Screenshot">
+        <h3>Payroll System</h3>
+        <div class="carousel">
+            <div class="carousel-images">
+                <img src="resources/images/cboo-login.png" alt="Image 1">
+                <img src="resources/images/help-page.png" alt="Image 2">
+                <img src="resources/images/positions-page.png" alt="Image 3">
+                <img src="resources/images/table-sample.png" alt="Image 4">
+                <!-- Add more images as needed -->
+            </div>
+            <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+            <a class="next" onclick="changeSlide(1)">&#10095;</a>
         </div>
     </section>
+    <script src="resources/js/navigation.js"></script>
+    <script src="resources/js/carousel.js"></script>
 </body>
 </html>
